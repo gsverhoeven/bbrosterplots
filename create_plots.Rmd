@@ -42,6 +42,7 @@ source("R/cluster_input_data.R")
 source("R/create_main_plot.R")
 source("R/create_legend_plot.R")
 source("R/write_rosterplot.R")
+source("R/create_rosterplot.R")
 ```
 
 ## Read prepped data
@@ -52,6 +53,7 @@ df_rosters1 <- readRDS("work/df_rosters1_raw_data.rds")
 group_name <- params$group_name
 tournament_ruleset <- params$tournament_ruleset
 races <- unique(df_rosters$roster.name)
+empty_out <- FALSE
 ```
 
 # V. Display
@@ -60,41 +62,26 @@ races <- unique(df_rosters$roster.name)
 Delete the folder then recreates it, to ensure old pictures are not confused with the latest data
 
 ```{r folder cleaning}
-#unlink(tournament_ruleset, recursive = TRUE)
-#dir.create(tournament_ruleset)
+if (empty_out) {
+  unlink(tournament_ruleset, recursive = TRUE)
+  dir.create(tournament_ruleset)
+}
 ```
 
 ## Create heatmap plots & add skill tables
 
-```{r heatmap}
-for(i in 1:1){
+```{r heatmap, warning = FALSE, message = FALSE}
+for(i in 1:5){
 #for(i in 1:length(races)){
   race_name <- races[i]
-  out_list <- cluster_input_data(df_rosters, group_name, race_name)
-  df <- out_list[[1]]
-  plot_title <- out_list[[2]]
-  
-  main_plot <- create_main_plot(df, plot_title)
-
-  # Calculate the number of skills displayed to adapt the height for the width of the legend and saving the plot
-  n_legend_items <- n_distinct(df$skill_name)
-  
-  legend_plot <- create_legend_plot(df, n_legend_items)
-  
-  # Combine the main plot and custom legend
-  final_plot <- gridExtra::arrangeGrob(
-    main_plot,              
-    legend_plot,        
-    ncol = 2,             
-    widths = c(3, 1)
-  )
-  plotname <- paste0(tournament_ruleset, "/", group_name, "_roster_plot_", race_name, ".png")
-  write_rosterplot(final_plot, plotname, n_legend_items)
+  grid.arrange(create_rosterplot(df_rosters, group_name, race_name))
   
 }
 ```
 
-# For skill tables we need the dataset without stacked skills
+# Create skill usage tables\
+
+For this we need the dataset without stacked skills.
 
 ```{r}
 # Initialize a list to store the skill tables
