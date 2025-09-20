@@ -1,0 +1,477 @@
+"position";"roster.name";"n";"sort_order";"cost"
+"2 bribes";"Black Orc";5;11;100
+"3 bribes";"Black Orc";2;12;150
+"Star player Fungus the Loon";"Black Orc";1;13;80
+"Star player The Black Gobbo";"Black Orc";1;14;225
+"Star player Varag Ghoul-Chewer";"Black Orc";;15;280
+"Star player Scrappa Sorehead";"Black Orc";;16;130
+"Star player Ripper Bolgrot";"Black Orc";;17;250
+"Star player Nobbla Blackwart";"Black Orc";;18;120
+"Star player H'Thark the Unstoppable";"Black Orc";;19;300
+"Goblin Bruiser Lineman";"Black Orc";120;1;45
+"Black Orc";"Black Orc";117;2;90
+"Trained Troll";"Black Orc";20;3;115
+"Star player Bomber Dribblesnot";"Black Orc";3;4;50
+"apothecary";"Black Orc";8;5;50
+"rerolls";"Black Orc";20;5;60
+"1 bribe";"Black Orc";5;6;50
+"assistantCoaches";"Black Orc";6;9;10
+"1 part-time assistant coach";"Black Orc";;10;20
+"3 part-time assistant coaches";"Black Orc";;11;60
+"cheerleaders";"Black Orc";4;20;10
+"1 bribe";"Chaos Chosen";1;11;100
+"Star player Hakflem Skuttlespike";"Chaos Chosen";1;12;210
+"Star player Skitter Stab-Stab";"Chaos Chosen";;13;150
+"Star player Lord Borak the Despoiler";"Chaos Chosen";;14;260
+"Star player H'Thark the Unstoppable";"Chaos Chosen";;15;300
+"Star player Grashnak Blackhoof";"Chaos Chosen";;16;240
+"Star player Glart Smashrip";"Chaos Chosen";;17;195
+"Beastman Runner Lineman";"Chaos Chosen";89;1;60
+"Chosen Blocker";"Chaos Chosen";52;2;100
+"Chaos Ogre";"Chaos Chosen";7;3;140
+"Chaos Troll";"Chaos Chosen";;4;115
+"Minotaur";"Chaos Chosen";5;5;150
+"apothecary";"Chaos Chosen";4;6;50
+"rerolls";"Chaos Chosen";13;7;60
+"assistantCoaches";"Chaos Chosen";7;9;10
+"1 bloodweiser keg";"Chaos Chosen";;10;50
+"cheerleaders";"Chaos Chosen";1;20;10
+"Star player H'Thark the Unstoppable";"Chaos Dwarf";;13;300
+"Star player Hakflem Skuttlespike";"Chaos Dwarf";3;14;210
+"Star player Lord Borak the Despoiler";"Chaos Dwarf";1;15;260
+"Hobgoblin Lineman";"Chaos Dwarf";167;1;40
+"Hobgoblin Sneaky Stabba";"Chaos Dwarf";;2;70
+"Chaos Dwarf Blocker";"Chaos Dwarf";251;3;70
+"Chaos Dwarf Flamesmith";"Chaos Dwarf";;4;80
+"Bull Centaur Blitzer";"Chaos Dwarf";82;5;130
+"Enslaved Minotaur";"Chaos Dwarf";21;6;150
+"Minotaur";"Chaos Dwarf";;6;150
+"rerolls";"Chaos Dwarf";41;7;70
+"apothecary";"Chaos Dwarf";27;8;50
+"1 halfling master chef";"Chaos Dwarf";1;9;300
+"1 bribe";"Chaos Dwarf";7;10;100
+"assistantCoaches";"Chaos Dwarf";33;11;10
+"Star player Bomber Dribblesnot";"Chaos Dwarf";1;12;50
+"cheerleaders";"Chaos Dwarf";8;7;10
+"Star player Hakflem Skuttlespike";"Chaos Renegade";1;12;210
+"Star player Lord Borak the Despoiler";"Chaos Renegade";1;13;260
+"Star player Scyla Anfingrimm";"Chaos Renegade";2;14;200
+"Star player Bilerot Vomitflesh";"Chaos Renegade";;14;180
+"Star player Akhorne the Squirrel";"Chaos Renegade";;11;80
+"Renegade Human Lineman";"Chaos Renegade";121;1;50
+"Renegade Human Thrower";"Chaos Renegade";9;2;75
+"Renegade Goblin";"Chaos Renegade";21;3;40
+"Renegade Orc";"Chaos Renegade";23;4;50
+"Renegade Skaven";"Chaos Renegade";20;5;50
+"Renegade Dark Elf";"Chaos Renegade";21;6;75
+"Renegade Troll";"Chaos Renegade";19;7;115
+"Renegade Ogre";"Chaos Renegade";22;8;140
+"Renegade Minotaur";"Chaos Renegade";9;9;150
+"Renegade Rat Ogre";"Chaos Renegade";18;10;150
+"Star player Kreek Rustgouger";"Chaos Renegade";2;11;170
+"apothecary";"Chaos Renegade";7;15;50
+"rerolls";"Chaos Renegade";23;16;70
+"assistantCoaches";"Chaos Renegade";14;17;10
+"1 part-time assistant coach";;;18;20
+"1 halfling master chef";;;21;300
+"1 bribe";"Chaos Renegade";4;18;100
+"cheerleaders";"Chaos Renegade";6;20;10
+"1 bribe";"Dark Elf";5;11;100
+"Dark Elf Lineman";"Dark Elf";325;1;70
+"Runner";"Dark Elf";59;2;80
+"Blitzer";"Dark Elf";283;3;100
+"Assassin";"Dark Elf";35;4;85
+"Witch Elf";"Dark Elf";146;5;110
+"apothecary";"Dark Elf";31;6;50
+"rerolls";"Dark Elf";74;7;50
+"assistantCoaches";"Dark Elf";18;9;10
+"1 bloodweiser keg";"Dark Elf";;10;50
+"cheerleaders";"Dark Elf";5;20;10
+"1 halfling master chef";"Dwarf";2;12;300
+"2 bribes";"Dwarf";1;13;200
+"Star player Mighty Zug";"Dwarf";1;14;220
+"Star player Karla Von Kill";"Dwarf";;15;210
+"Dwarf Blocker Lineman";"Dwarf";353;1;70
+"Runner";"Dwarf";82;2;85
+"Blitzer";"Dwarf";106;3;80
+"Troll Slayer";"Dwarf";68;4;95
+"Deathroller";"Dwarf";30;5;170
+"rerolls";"Dwarf";50;6;50
+"apothecary";"Dwarf";17;7;50
+"assistantCoaches";"Dwarf";24;9;10
+"1 bribe";"Dwarf";11;11;100
+"1 bloodweiser keg";"Dwarf";;11;50
+"cheerleaders";"Dwarf";3;20;10
+"1 bribe";"Elven Union";5;10;100
+"apothecary";"Elven Union";7;11;50
+"Star player Roxanna Darknail";"Elven Union";1;12;270
+"Lineman";"Elven Union";124;1;60
+"Thrower";"Elven Union";32;2;75
+"Catcher";"Elven Union";53;3;100
+"Blitzer";"Elven Union";40;4;115
+"Star player Eldril Sidewinder";"Elven Union";1;5;230
+"rerolls";"Elven Union";20;6;50
+"assistantCoaches";"Elven Union";12;9;10
+"cheerleaders";"Elven Union";6;20;10
+"1 bribe";"Goblin";1;14;100
+"2 bribes";"Goblin";1;15;200
+"Bomma";"Goblin";6;2;45
+"Doom Diver";"Goblin";7;7;60
+"Pogoer";"Goblin";6;5;75
+"Star player Bomber Dribblesnot";"Goblin";1;16;50
+"Star player Crumbleberry";"Goblin";1;17;125
+"Star player Grak";"Goblin";1;18;125
+"Star player Hakflem Skuttlespike";"Goblin";1;19;210
+"Star player Morg 'n' Thorg";"Goblin";1;19;380
+"Star player The Black Gobbo";"Goblin";3;19;225
+"Star player Varag Ghoul-Chewer";"Goblin";1;19;280
+"Star player Glart Smashrip";"Goblin";;20;195
+"Goblin Lineman";"Goblin";126;1;40
+"Looney";"Goblin";13;3;40
+"Fanatic";"Goblin";12;4;70
+"'Ooligan";"Goblin";12;6;65
+"Trained Troll";"Goblin";30;8;115
+"Star player Fungus the Loon";"Goblin";2;21;80
+"Star player Kreek Rustgouger";"Goblin";1;22;170
+"3 bribes";"Goblin";4;16;150
+"rerolls";"Goblin";15;17;60
+"assistantCoaches";"Goblin";5;18;10
+"1 halfling master chef";"Goblin";;20;300
+"cheerleaders";"Goblin";5;19;10
+"Mercenary Merc Halfling Hopeful Lineman 1";"Halfling";1;17;60
+"Star player Deeproot Strongbranch";"Halfling";2;13;280
+"Star player Grim Ironjaw";"Halfling";1;14;200
+"Star player Grombrindal";"Halfling";1;15;210
+"Star player Ivar Eriksson";"Halfling";1;16;245
+"Star player Karla Von Kill";"Halfling";1;17;210
+"Star player Rumbelow Sheepskin";"Halfling";3;18;170
+"the White Dwarf";"Halfling";1;19;210
+"Halfling Hopeful Lineman";"Halfling";148;1;30
+"Halfling Hefty";"Halfling";16;2;50
+"Halfling Catcher";"Halfling";11;3;55
+"Altern Forest Treeman";"Halfling";30;4;120
+"Star player Griff Oberwald";"Halfling";10;20;280
+"Star player Morg 'n' Thorg";"Halfling";1;21;380
+"Star player Rodney Roachbait";"Halfling";;22;70
+"1 halfling master chef";"Halfling";15;8;100
+"rerolls";"Halfling";9;10;60
+"1 bloodweiser keg";"Halfling";1;11;50
+"assistantCoaches";"Halfling";10;11;10
+"apothecary";"Halfling";;12;50
+"cheerleaders";"Halfling";3;11;10
+"Lineman";"High Elf";284;1;70
+"Thrower";"High Elf";53;2;100
+"Catcher";"High Elf";159;3;90
+"Blitzer";"High Elf";100;4;100
+"rerolls";"High Elf";50;6;50
+"apothecary";"High Elf";26;7;50
+"1 bribe";"High Elf";7;8;100
+"assistantCoaches";"High Elf";41;9;10
+"1 bloodweiser keg";"High Elf";1;10;50
+"cheerleaders";"High Elf";5;20;10
+"Star player Rumbelow Sheepskin";"Human";;14;170
+"Star player Ivar Eriksson";"Human";;15;245
+"Star player Grombrindal";"Human";2;10;210
+"Star player Mighty Zug";"Human";1;11;220
+"Star player Skrorg Snowpelt";"Human";1;12;250
+"the White Dwarf";"Human";2;13;210
+"Human Lineman";"Human";118;1;50
+"Thrower";"Human";30;2;80
+"Catcher";"Human";53;3;65
+"Blitzer";"Human";112;4;85
+"Halfling Hopeful";"Human";34;5;30
+"Ogre";"Human";27;6;140
+"rerolls";"Human";28;7;50
+"1 bribe";"Human";6;8;100
+"1 bloodweiser keg";"Human";;9;50
+"apothecary";"Human";16;10;50
+"assistantCoaches";"Human";7;11;10
+"cheerleaders";"Human";1;20;10
+"assistantCoaches";"Imperial Nobility";4;9;10
+"Star player Mighty Zug";"Imperial Nobility";1;10;220
+"Star player Ivar Eriksson";"Imperial Nobility";;12;245
+"Imperial Retainer Lineman";"Imperial Nobility";127;1;45
+"Imperial Thrower";"Imperial Nobility";27;2;75
+"Noble Blitzer";"Imperial Nobility";53;3;105
+"Bodyguard";"Imperial Nobility";106;4;90
+"Ogre";"Imperial Nobility";25;5;140
+"rerolls";"Imperial Nobility";27;6;70
+"apothecary";"Imperial Nobility";7;7;50
+"1 bribe";"Imperial Nobility";5;8;100
+"cheerleaders";"Imperial Nobility";1;9;10
+"apothecary";"Khorne";4;12;50
+"assistantCoaches";"Khorne";3;11;10
+"Star player Kreek Rustgouger";"Khorne";1;10;170
+"Bloodborn Marauder Lineman";"Khorne";65;1;50
+"Khorngor";"Khorne";63;2;70
+"Bloodseeker";"Khorne";75;3;110
+"Bloodspawn";"Khorne";18;4;160
+"rerolls";"Khorne";19;5;60
+"1 bribe";"Khorne";5;8;100
+"cheerleaders";"Khorne";1;20;10
+"Star player Akhorne the Squirrel";"Lizardmen";;11;80
+"Skink Runner Lineman";"Lizardmen";235;1;60
+"Chameleon Skink";"Lizardmen";39;2;70
+"Saurus Blocker";"Lizardmen";336;3;85
+"Kroxigor";"Lizardmen";55;4;140
+"rerolls";"Lizardmen";56;5;70
+"apothecary";"Lizardmen";53;6;50
+"1 bribe";"Lizardmen";6;7;100
+"assistantCoaches";"Lizardmen";3;9;10
+"cheerleaders";"Lizardmen";1;20;10
+"1 bribe";"Necromantic Horror";2;12;100
+"Star player Gretchen Wächter 'The Blood Bowl Widow'";"Necromantic Horror";1;11;260
+"Zombie Lineman";"Necromantic Horror";205;1;40
+"Ghoul Runner";"Necromantic Horror";96;2;75
+"Werewolf";"Necromantic Horror";88;2;125
+"Wraith";"Necromantic Horror";98;3;95
+"Flesh Golem";"Necromantic Horror";97;4;115
+"rerolls";"Necromantic Horror";48;5;70
+"assistantCoaches";"Necromantic Horror";23;9;10
+"cheerleaders";"Necromantic Horror";13;20;10
+"Norse Lineman";"Norse";5;1;50
+"Norse Raider Lineman";"Norse";181;1;50
+"Beer Boar";"Norse";28;2;20
+"Norse Thrower";"Norse";4;2;70
+"Norse Catcher";"Norse";17;3;90
+"Norse Berserker";"Norse";33;4;90
+"Ulfwerener";"Norse";58;5;105
+"Valkyrie";"Norse";34;5;95
+"Yhetee";"Norse";17;6;140
+"rerolls";"Norse";29;7;60
+"apothecary";"Norse";11;9;50
+"1 bribe";"Norse";1;10;100
+"Star player Deeproot Strongbranch";"Norse";2;11;280
+"Star player Griff Oberwald";"Norse";1;12;280
+"Star player Ivar Eriksson";"Norse";1;13;245
+"Star player Mighty Zug";"Norse";1;14;220
+"Star player Skrorg Snowpelt";"Norse";1;15;250
+"Star player Zolcath the Zoat";"Norse";1;16;230
+"Star player Lord Borak the Despoiler";"Norse";;17;260
+"assistantCoaches";"Norse";7;19;10
+"cheerleaders";"Norse";1;20;10
+"Norse Lineman";"Norse Eurobowl 2022";64;1;50
+"Norse Thrower";"Norse Eurobowl 2022";1;2;70
+"Norse Catcher";"Norse Eurobowl 2022";10;3;90
+"Norse Bezerker";"Norse Eurobowl 2022";3;4;90
+"Ulfwerener";"Norse Eurobowl 2022";16;5;105
+"Yhettee";"Norse Eurobowl 2022";2;6;140
+"rerolls";"Norse Eurobowl 2022";8;7;60
+"Star player Deeproot Strongbranch";"Norse Eurobowl 2022";6;11;280
+"assistantCoaches";"Norse Eurobowl 2022";1;19;10
+"cheerleaders";"Norse Eurobowl 2022";1;20;10
+"Star player Glart Smashrip";"Nurgle";;20;195
+"assistantCoaches";"Nurgle";4;11;10
+"Rotter Lineman";"Nurgle";44;1;35
+"Pestigor";"Nurgle";36;2;75
+"Bloater";"Nurgle";43;3;115
+"Rotspawn";"Nurgle";11;4;140
+"rerolls";"Nurgle";11;5;70
+"1 bribe";"Nurgle";2;10;100
+"cheerleaders";"Nurgle";1;12;10
+"Star player Griff Oberwald";"Ogre";1;11;280
+"Star player H'Thark the Unstoppable";"Ogre";;12;300
+"Gnoblar Lineman";"Ogre";15;1;15
+"Ogre Blocker";"Ogre";9;2;140
+"Ogre Runt Punter";"Ogre";2;3;145
+"Star player Mighty Zug";"Ogre";1;6;220
+"assistantCoaches";"Ogre";1;9;10
+"1 bribe";"Old World Alliance";3;24;100
+"2 bribes";"Old World Alliance";1;24;200
+"apothecary";"Old World Alliance";8;23;50
+"Ogre";"Old World Alliance";11;10;140
+"Old World Dwarf Runner";"Old World Alliance";4;6;85
+"Star player Grombrindal";"Old World Alliance";2;16;210
+"Star player Ivar Eriksson";"Old World Alliance";2;17;245
+"Star player Skrorg Snowpelt";"Old World Alliance";1;18;250
+"the White Dwarf";"Old World Alliance";2;19;210
+"Old World Human Lineman";"Old World Alliance";119;1;50
+"Old World Human Thrower";"Old World Alliance";36;2;80
+"Old World Human Catcher";"Old World Alliance";33;3;65
+"Old World Human Blitzer";"Old World Alliance";36;4;90
+"Old World Dwarf Blocker";"Old World Alliance";47;5;75
+"Old World Dwarf Blitzer";"Old World Alliance";36;7;80
+"Old World Dwarf Troll Slayer";"Old World Alliance";30;8;95
+"Old World Halfling Hopeful";"Old World Alliance";61;9;30
+"Altern Forest Treeman";"Old World Alliance";24;10;120
+"Star player Deeproot Strongbranch";"Old World Alliance";5;11;280
+"Star player Mighty Zug";"Old World Alliance";5;12;220
+"Star player Griff Oberwald";"Old World Alliance";10;13;280
+"Star player Karla Von Kill";"Old World Alliance";;14;210
+"Star player Akhorne the Squirrel";"Old World Alliance";;15;80
+"rerolls";"Old World Alliance";36;20;70
+"assistantCoaches";"Old World Alliance";14;21;10
+"cheerleaders";"Old World Alliance";5;22;10
+"Orc Lineman";"Orc";98;1;50
+"Thrower";"Orc";40;2;65
+"Blitzer";"Orc";231;3;80
+"Big Un Blocker";"Orc";231;4;90
+"Goblin";"Orc";76;5;40
+"Untrained Troll";"Orc";44;6;115
+"rerolls";"Orc";58;7;60
+"assistantCoaches";"Orc";30;9;10
+"apothecary";"Orc";26;10;50
+"1 bribe";"Orc";8;11;100
+"cheerleaders";"Orc";11;20;10
+"Skeleton Lineman";"Shambling Undead";52;1;40
+"Zombie Lineman";"Shambling Undead";249;2;40
+"Ghoul Runner";"Shambling Undead";236;3;75
+"Wight Blitzer";"Shambling Undead";120;4;90
+"Mummy";"Shambling Undead";120;5;125
+"rerolls";"Shambling Undead";60;6;70
+"assistantCoaches";"Shambling Undead";47;9;10
+"1 bribe";"Shambling Undead";6;14;100
+"1 bloodweiser keg";"Shambling Undead";4;15;50
+"cheerleaders";"Shambling Undead";6;20;10
+"1 bribe";"Skaven";10;13;100
+"Star player Hakflem Skuttlespike";"Skaven";1;12;210
+"Skaven Clanrat Lineman";"Skaven";302;1;50
+"Thrower";"Skaven";58;2;85
+"Gutter Runner";"Skaven";235;3;85
+"Blitzer";"Skaven";121;4;90
+"Rat Ogre";"Skaven";58;5;150
+"rerolls";"Skaven";62;6;50
+"Star player Glart Smashrip";"Skaven";2;7;195
+"Star player Kreek Rustgouger";"Skaven";2;8;170
+"1 bloodweiser keg";"Skaven";;9;50
+"apothecary";"Skaven";26;10;50
+"assistantCoaches";"Skaven";55;11;10
+"cheerleaders";"Skaven";21;20;10
+"Lineman";"Slann";79;1;60
+"Catcher";"Slann";33;2;80
+"Blitzer";"Slann";15;3;110
+"Kroxigor";"Slann";8;4;140
+"Star player Zolcath the Zoat";"Slann";;20;230
+"rerolls";"Slann";11;5;50
+"apothecary";"Slann";4;6;50
+"1 bribe";"Slann";1;7;100
+"1 part-time assistant coach";"Slann";;8;20
+"assistantCoaches";"Slann";7;9;10
+"1 bribe";"Snotling";1;18;50
+"1 halfling master chef";"Snotling";1;19;300
+"1 Riotous rookie";"Snotling";6;20;100
+"3 bribes";"Snotling";3;18;150
+"4 bribes";"Snotling";1;18;200
+"Fun-hoppa";"Snotling";10;3;20
+"Pump Wagon";"Snotling";7;5;105
+"Star player Kreek Rustgouger";"Snotling";1;21;170
+"Star player Morg 'n' Thorg";"Snotling";2;22;380
+"Star player Varag Ghoul-Chewer";"Snotling";2;23;280
+"Stilty Runna";"Snotling";15;4;20
+"Snotling Lineman";"Snotling";75;1;15
+"Fungus Flinga";"Snotling";6;2;30
+"Trained Troll";"Snotling";18;6;115
+"Star player Skitter Stab-Stab";"Snotling";;24;150
+"Star player Scrappa Sorehead";"Snotling";;25;130
+"Star player Ripper Bolgrot";"Snotling";;26;250
+"Star player Nobbla Blackwart";"Snotling";;27;120
+"Star player Fungus the Loon";"Snotling";;28;80
+"Star player Hakflem Skuttlespike";"Snotling";6;29;210
+"Star player Glart Smashrip";"Snotling";1;30;195
+"rerolls";"Snotling";7;9;60
+"1 part-time assistant coach";"Snotling";;10;20
+"assistantCoaches";"Snotling";3;10;10
+"2 bribes";"Snotling";2;11;100
+"Star player Crumbleberry";"Tomb Kings";1;12;125
+"Star player Grak";"Tomb Kings";1;12;125
+"Star player Wilhelm Chaney";"Tomb Kings";1;14;220
+"Star player Ivan 'The Animal' Deathshroud";"Tomb Kings";;15;190
+"Star player Count Luthor von Drakenborg";"Tomb Kings";;16;340
+"Star player Akhorne the Squirrel";"Tomb Kings";;17;80
+"Skeleton Lineman";"Tomb Kings";139;1;40
+"Anointed Thrower";"Tomb Kings";48;2;70
+"Anointed Blitzer";"Tomb Kings";53;3;90
+"Tomb Guardian";"Tomb Kings";108;4;100
+"rerolls";"Tomb Kings";27;5;70
+"assistantCoaches";"Tomb Kings";24;9;10
+"1 bribe";"Tomb Kings";4;11;100
+"1 halfling master chef";"Tomb Kings";;12;300
+"cheerleaders";"Tomb Kings";11;20;10
+"1 bloodweiser babe";"Underworld Denizens";5;17;50
+"Star player Hakflem Skuttlespike";"Underworld Denizens";2;13;210
+"Underworld Goblin Lineman";"Underworld Denizens";186;1;40
+"Underworld Snotlings";"Underworld Denizens";331;2;15
+"Skaven Clanrat";"Underworld Denizens";183;3;50
+"Skaven Thrower";"Underworld Denizens";61;4;85
+"Gutter Runner";"Underworld Denizens";61;5;85
+"Skaven Blitzer";"Underworld Denizens";61;6;90
+"Underworld Troll";"Underworld Denizens";31;7;115
+"Mutant Rat Ogre";"Underworld Denizens";30;8;150
+"rerolls";"Underworld Denizens";57;9;70
+"Star player Glart Smashrip";"Underworld Denizens";4;10;195
+"Star player Kreek Rustgouger";"Underworld Denizens";6;11;170
+"Star player Morg 'n' Thorg";"Underworld Denizens";10;12;380
+"Star player Varag Ghoul-Chewer";"Underworld Denizens";5;13;280
+"apothecary";"Underworld Denizens";39;14;50
+"assistantCoaches";"Underworld Denizens";25;15;10
+"1 bloodweiser keg";"Underworld Denizens";2;17;50
+"2 bloodweiser kegs";"Underworld Denizens";;18;100
+"1 bribe";"Underworld Denizens";18;19;50
+"1 halfling master chef";"Underworld Denizens";5;23;300
+"2 bribes";"Underworld Denizens";14;20;100
+"cheerleaders";"Underworld Denizens";8;24;10
+"1 biased referee";"Underworld Denizens";;25;80
+"3 bribes";"Underworld Denizens";3;22;150
+"1 bribe";"Vampire";1;13;100
+"apothecary";"Vampire";2;11;50
+"assistantCoaches";"Vampire";3;14;10
+"Thrall Lineman";"Vampire";110;1;40
+"Vampire Runner";"Vampire";;2;100
+"Vampire Thrower";"Vampire";;3;110
+"Vampire Blitzer";"Vampire";71;4;110
+"Vargheist";"Vampire";;5;150
+"1 bloodweiser keg";"Vampire";71;12;50
+"rerolls";"Vampire";14;10;70
+"Star player Wilhelm Chaney";"Vampire";2;20;220
+"cheerleaders";"Vampire";1;15;10
+"Wood Elf Lineman";"Wood Elf";181;1;70
+"Catcher";"Wood Elf";125;2;90
+"Thrower";"Wood Elf";36;2;95
+"Wardancer";"Wood Elf";84;4;125
+"Loren Forest Treeman";"Wood Elf";39;5;120
+"rerolls";"Wood Elf";42;6;50
+"apothecary";"Wood Elf";12;7;50
+"1 bloodweiser keg";"Wood Elf";;8;50
+"1 bribe";"Wood Elf";1;8;100
+"assistantCoaches";"Wood Elf";23;9;10
+"cheerleaders";"Wood Elf";1;20;10
+"1 bribe";"Amazon";5;7;100
+"2 bribes";"Amazon";1;8;200
+"apothecary";"Amazon";15;6;50
+"assistantCoaches";"Amazon";10;9;10
+"cheerleaders";"Amazon";5;10;10
+"1 bloodweiser keg";"Amazon";;11;50
+"Eagle Warrior Linewoman";"Amazon";149;1;50
+"Jaguar Warrior Blocker";"Amazon";38;4;110
+"Piranha Warrior Blitzer";"Amazon";34;3;90
+"Python Warrior Thrower";"Amazon";21;2;80
+"rerolls";"Amazon";19;5;50
+"Star player Grombrindal";"Amazon";1;12;210
+"Star player Zolcath the Zoat";"Amazon";1;13;230
+"Star player Akhorne the Squirrel";"Amazon";;11;80
+"the White Dwarf";"Amazon";1;14;210
+"1 bribe";"Amazon Eurobowl 2022";3;7;100
+"2 bribes";"Amazon Eurobowl 2022";1;8;200
+"apothecary";"Amazon Eurobowl 2022";7;6;50
+"assistantCoaches";"Amazon Eurobowl 2022";6;9;10
+"cheerleaders";"Amazon Eurobowl 2022";5;20;10
+"Eagle Warrior Thrower";"Amazon Eurobowl 2022";4;2;75
+"Koka Kalim Blitzer";"Amazon Eurobowl 2022";28;4;90
+"Piranha Warrior Catcher";"Amazon Eurobowl 2022";2;3;75
+"rerolls";"Amazon Eurobowl 2022";7;5;50
+"Tribal Linewoman";"Amazon Eurobowl 2022";60;1;50
+"1 bribe";"Amazon Team of Legend";7;17;100
+"2 bloodweiser babes";"Amazon Team of Legend";1;11;100
+"apothecary";"Amazon Team of Legend";13;8;50
+"assistantCoaches";"Amazon Team of Legend";17;19;10
+"cheerleaders";"Amazon Team of Legend";9;18;10
+"Eagle Warrior Linewoman";"Amazon Team of Legend";227;1;50
+"Koka Kalim Blitzer";"Amazon Team of Legend";115;3;90
+"Piranha Warrior Catcher";"Amazon Team of Legend";16;4;75
+"Python Warrior Thrower";"Amazon Team of Legend";12;2;80
+"rerolls";"Amazon Team of Legend";29;7;50
+"Star player Grombrindal";"Amazon Team of Legend";5;14;210
+"Star player Mighty Zug";"Amazon Team of Legend";1;12;260
+"Star player Morg 'n' Thorg";"Amazon Team of Legend";1;13;380
+"Star player Zolcath the Zoat";"Amazon Team of Legend";6;16;230
+"the White Dwarf";"Amazon Team of Legend";5;15;210
