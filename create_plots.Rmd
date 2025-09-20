@@ -53,13 +53,11 @@ df_rosters1 <- readRDS("work/df_rosters1_raw_data.rds")
 group_name <- params$group_name
 tournament_ruleset <- params$tournament_ruleset
 races <- unique(df_rosters$roster.name)
+races <- races[1:3]
 empty_out <- FALSE
 ```
 
-# V. Display
-## Hierarchical clustering
-
-Delete the folder then recreates it, to ensure old pictures are not confused with the latest data
+Optional step: Delete the folder then recreates it, to ensure old pictures are not confused with the latest data
 
 ```{r folder cleaning}
 if (empty_out) {
@@ -68,18 +66,17 @@ if (empty_out) {
 }
 ```
 
-## Create heatmap plots & add skill tables
+## Create heatmap plots
 
 ```{r heatmap, warning = FALSE, message = FALSE}
-for(i in 1:5){
-#for(i in 1:length(races)){
+for(i in 1:length(races)){
   race_name <- races[i]
   grid.arrange(create_rosterplot(df_rosters, group_name, race_name))
   
 }
 ```
 
-# Create skill usage tables\
+# Create skill usage tables
 
 For this we need the dataset without stacked skills.
 
@@ -87,8 +84,7 @@ For this we need the dataset without stacked skills.
 # Initialize a list to store the skill tables
 skill_table_list <- list()
 
-for(i in 1:1){
-#for(i in 1:length(races)){
+for(i in 1:length(races)){
   race_name <- races[i]
   # Store skill tables for the race in a list (so they can be displayed outside the loop all at once)
   skill_table_list[[i]] <- make_skill_table(race_name, df_rosters1)
