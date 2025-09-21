@@ -1,16 +1,28 @@
 Package: bbrosterplots
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Create Clustered Heatmaps to Visualize Blood Bowl rosters
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Gertjan", "Verhoeven",
+      email = "gertjanverhoeven@gmail.com",
       role = c("aut", "cre")
-    )
+    ),
+    person("Hiliadan", role = c("aut"))
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: This package allows creation of a PDF rosterbook containing all different races that participated in a tournament.
+  For each race it makes a plot (a clustered heatmap) displaying the roster as a colorcoded matrix, 
+  where teams that are similar (based on a cost weighted similarity score) are put side by side.
+License: MIT
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/gsverhoeven/bbrosterplots
+BugReports: https://github.com/gsverhoeven/bbrosterplots/issues
+Imports:
+    ggoheatmap,
+    ggplot2,
+    gridExtra,
+    htmltools,
+    janitor,
+    knitr,
+    reactable
