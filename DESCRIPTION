@@ -24,10 +24,12 @@ Imports:
     ggplot2,
     gridExtra,
     htmltools,
+    htmlwidgets,
     janitor,
     knitr,
     magrittr,
-    reactable
+    reactable,
+    webshot2
 Suggests: 
     rmarkdown
 VignetteBuilder: knitr
