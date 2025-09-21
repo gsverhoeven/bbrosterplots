@@ -19,13 +19,18 @@ LazyData: true
 URL: https://github.com/gsverhoeven/bbrosterplots
 BugReports: https://github.com/gsverhoeven/bbrosterplots/issues
 Imports:
+    dplyr,
     ggoheatmap,
     ggplot2,
     gridExtra,
     htmltools,
     janitor,
     knitr,
+    magrittr,
     reactable
 Suggests: 
     rmarkdown
 VignetteBuilder: knitr
+Depends: 
+    R (>= 3.5)
+RoxygenNote: 7.3.2
