@@ -15,6 +15,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+# I. Loading package and data
+## Load packages
+
 ```{r setup}
 library(bbrosterplots)
 ```
@@ -25,38 +28,24 @@ This needs to be part of the package, will not be part of the input data:
 * adding the cost for each player and inducement
 * a table with all the skill colors, 
 
-
-# I. Loading package and data
-## Load packages
-
 ```{r}
 # Load packages
-library(tidyverse)
-library(gridExtra)
-library(janitor)
-library(reactable)
-library(htmltools) # for tagList()
-#devtools::install_github("kcuilla/reactablefmtr") # DO NOT USE THE CRAN VERSION IT IS OUTDATED, HOWEVER THIS VERSION ALSO HAS A BUG WITH A PR FIX OPEN
-library(reactablefmtr) 
-#devtools::install_github("gsverhoeven/ggoheatmap")
-library(ggoheatmap)
+# library(tidyverse)
+# library(gridExtra)
+# library(janitor)
+# library(reactable)
+# library(htmltools) # for tagList()
+# #devtools::install_github("kcuilla/reactablefmtr") # DO NOT USE THE CRAN VERSION IT IS OUTDATED, HOWEVER THIS VERSION ALSO HAS A BUG WITH A PR FIX OPEN
+# library(reactablefmtr) 
+# #devtools::install_github("gsverhoeven/ggoheatmap")
+# library(ggoheatmap)
 ```
-
-```{r}
-# source("R/helper_functions.R")
-# source("R/cluster_input_data.R")
-# source("R/create_main_plot.R")
-# source("R/create_legend_plot.R")
-# source("R/write_rosterplot.R")
-# source("R/create_rosterplot.R")
-```
-
 
 ## Read example data
 
 ```{r}
-df_rosters <- readRDS("work/df_rosters_prepped_data.rds")
-df_rosters1 <- readRDS("work/df_rosters1_raw_data.rds")
+data(df_rosters) # <- readRDS("../inst/df_rosters_prepped_data.rds")
+data(df_rosters1) # <- readRDS("../inst/df_rosters1_raw_data.rds")
 group_name <- "Super League S6"
 tournament_ruleset <- "EB25"
 races <- unique(df_rosters$roster.name)
@@ -78,7 +67,7 @@ if (empty_out) {
 ```{r heatmap, warning = FALSE, message = FALSE}
 for(i in 1:length(races)){
   race_name <- races[i]
-  grid.arrange(create_rosterplot(df_rosters, group_name, race_name))
+  gridExtra::grid.arrange(create_rosterplot(df_rosters, group_name, race_name))
   
 }
 ```
