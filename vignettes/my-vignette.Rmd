@@ -29,12 +29,6 @@ This needs to be part of the package, will not be part of the input data:
 * a table with all the skill colors, 
 
 ```{r}
-# Load packages
-# library(tidyverse)
-# library(gridExtra)
-# library(janitor)
-# library(reactable)
-# library(htmltools) # for tagList()
 # #devtools::install_github("kcuilla/reactablefmtr") # DO NOT USE THE CRAN VERSION IT IS OUTDATED, HOWEVER THIS VERSION ALSO HAS A BUG WITH A PR FIX OPEN
 # library(reactablefmtr) 
 # #devtools::install_github("gsverhoeven/ggoheatmap")
