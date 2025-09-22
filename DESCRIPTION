@@ -29,6 +29,7 @@ Imports:
     knitr,
     magrittr,
     reactable,
+    tidyr,
     webshot2
 Suggests: 
     rmarkdown
