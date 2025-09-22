@@ -27,7 +27,7 @@ cluster_input_data <- function(df_rosters, group_name, race_name){
     df <- df %>%
       mutate(cluster_order = as.integer(as.factor(coach_name)))
   }
-  df$coach_team_id <- paste0(df$coach_name, "_", str_sub(as.character(df$team_id)))
+  df$coach_team_id <- paste0(df$coach_name, "_", stringr::str_sub(as.character(df$team_id)))
 
 
   # Wrap title to ensure it does not overlap with caption (e.g. for Imperial Nobility)
