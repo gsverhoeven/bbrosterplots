@@ -10,7 +10,8 @@ write_rosterplot(
   n_legend_items,
   base_height = 6.3,
   extra_height_per_item = 0.25,
-  verbose = FALSE
+  verbose = FALSE,
+  create.dir = TRUE
 )
 }
 \arguments{
