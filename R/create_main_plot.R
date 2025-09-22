@@ -1,3 +1,4 @@
+#' @import ggplot2
 create_main_plot <- function(df, plot_title){
   main_plot <- ggplot(df, aes(x = reorder(factor(coach_team_id), cluster_order), y = reorder(paste(position, nr), -sort_order))) +
     geom_tile(aes(fill = color), color = "black") +
@@ -6,7 +7,7 @@ create_main_plot <- function(df, plot_title){
                         labels = c(df$skill_name)) +
     coord_fixed() +
     theme(legend.position = "none") +
-    ggtitle(plot_title) + 
+    ggtitle(plot_title) +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +
     theme(panel.background = element_rect(fill = "white")) +
     theme(plot.margin = ggplot2::margin(l = 0)) + # Set left margin to 0 to try to move to the left
