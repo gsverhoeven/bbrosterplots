@@ -4,7 +4,7 @@
 \alias{make_skill_table}
 \title{Make Skill tables}
 \usage{
-make_skill_table(race_name, df_rosters)
+make_skill_table(race_name, df_rosters, return_table = FALSE)
 }
 \arguments{
 \item{race_name}{A race name.}

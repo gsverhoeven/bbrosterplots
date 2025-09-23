@@ -5,7 +5,7 @@
 #' @returns A tag list.
 
 #' @export
-make_skill_table <- function(race_name, df_rosters) {
+make_skill_table <- function(race_name, df_rosters, return_table = FALSE) {
   df <- df_rosters %>%
     filter(roster.name == race_name & position != "" & number != 99) %>%
     # Drop rows with no skill if at least one other skill is filled for the player (to solve a bug with multiple rows for some players with only 1 skill)
@@ -45,9 +45,10 @@ make_skill_table <- function(race_name, df_rosters) {
       values_from = team_picks,
       values_fill = list(team_picks = 0)
     )
-
-  return(  htmltools::tagList(
-    build_table(percentage_table, "percentage", TRUE),
-    build_table(team_table, "team", TRUE)
-  ))
+  if(return_table){
+    return(  htmltools::tagList(
+      build_table(percentage_table, "percentage", TRUE),
+      build_table(team_table, "team", TRUE)
+    ))
+  }
 }
