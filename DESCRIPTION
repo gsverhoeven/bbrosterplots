@@ -19,6 +19,7 @@ LazyData: true
 URL: https://github.com/gsverhoeven/bbrosterplots
 BugReports: https://github.com/gsverhoeven/bbrosterplots/issues
 Imports:
+    data.table,
     dplyr,
     ggplot2,
     gridExtra,

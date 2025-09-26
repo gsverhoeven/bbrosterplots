@@ -11,7 +11,7 @@ hclust_order <- function(df,
                          dist_method = "euclidean",
                          dcast_fun.aggregate = NULL,
                          dcast_fill = 0) {
-  df <- as.data.table(df)
+  df <- data.table::as.data.table(df)
 
 
   # transform from long to wide using dcast
@@ -29,27 +29,26 @@ hclust_order <- function(df,
 
   df_wide <- df_wide[, (xvar) := NULL]
 
-  dist_mat <- dist(x = df_wide,
+  dist_mat <- stats::dist(x = df_wide,
                   method = dist_method)
 
   # cluster using hclust / dist
-  clust <- hclust(d = dist_mat,
+  clust <- stats::hclust(d = dist_mat,
                   method = clust_method )
 
   # extract ordering
   obs_label <- rownames(df_wide)[clust$order]
 
-  order_table <- data.table(first_col = obs_label,
+  order_table <- data.table::data.table(first_col = obs_label,
                             cluster_order = 1:nrow(df_wide))
 
   setnames(order_table, "first_col", xvar)
 
   # add ordering to original dataset
-  setkeyv(order_table, xvar)  # it orders the x value
-  setkeyv(df, xvar)
+  data.table::setkeyv(order_table, xvar)  # it orders the x value
+  data.table::setkeyv(df, xvar)
 
   df <- order_table[df]
 
-  # return df
   return(df)
 }
