@@ -1,7 +1,6 @@
 cluster_input_data <- function(df_rosters, group_name, race_name){
 
   df <- df_rosters %>%
-    filter(is.na(banned_due_to_star_player) & is.na(banned_due_to_inducements) & is.na(banned_due_to_number_of_skills)) %>%
     filter(roster.name == race_name) %>%
     filter(!(position %in% c("cheerleaders", "assistantCoaches"))) %>%
     group_by(team_id, coach_name, player_id, position, sort_order, number, skill_name, color) %>% # skill stacking
@@ -17,7 +16,7 @@ cluster_input_data <- function(df_rosters, group_name, race_name){
       mutate(position_unique = paste0(position, "_", nr)) %>%
       mutate(team_id_char = as.character(team_id)) %>%
       ungroup() %>%
-      ggoheatmap::hclust_order(xvar = "team_id_char",
+      hclust_order(xvar = "team_id_char",
                                yvar = "position_unique",
                                value_var = "cost", dcast_fill = 1) %>%
       select(team_id, cluster_order) %>%

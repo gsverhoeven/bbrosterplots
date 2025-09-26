@@ -26,7 +26,6 @@ This needs to be part of the package, will not be part of the input data:
 
 ```{r}
 # #devtools::install_github("kcuilla/reactablefmtr") # DO NOT USE THE CRAN VERSION IT IS OUTDATED, HOWEVER THIS VERSION ALSO HAS A BUG WITH A PR FIX OPEN
-# #devtools::install_github("gsverhoeven/ggoheatmap")
 ```
 
 ## Read example data
