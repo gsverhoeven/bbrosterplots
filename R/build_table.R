@@ -1,4 +1,4 @@
-build_table <- function(data, type, save) {
+build_table <- function(data, type, group_name, race_name, save) {
   data <- data %>%
     janitor::adorn_totals("col") %>%
     janitor::adorn_totals("row") %>%
