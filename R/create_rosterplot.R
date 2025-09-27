@@ -2,6 +2,8 @@
 #'
 #' @param df_rosters A roster.
 #' @param group_name A group name.
+#' @param race_name A race name.
+#' @param write whether to write the plot to disk or not.
 #' @returns A plot object.
 
 #' @export
@@ -17,7 +19,7 @@ create_rosterplot <- function(df_rosters, group_name, race_name, write = TRUE){
   n_legend_items <- n_distinct(df$skill_name)
 
   legend_plot <- create_legend_plot(df, n_legend_items)
-
+  #
   # Combine the main plot and custom legend
   final_plot <- gridExtra::arrangeGrob(
     main_plot,
@@ -27,5 +29,9 @@ create_rosterplot <- function(df_rosters, group_name, race_name, write = TRUE){
   )
   plotname <- paste0(tournament_ruleset, "/", group_name, "_roster_plot_", race_name, ".png")
   write_rosterplot(final_plot, plotname, n_legend_items)
-  return(gridExtra::grid.arrange(final_plot))
+
+  # draw plot
+  final_plot <- gridExtra::grid.arrange(final_plot)
+  return(final_plot)
+
 }

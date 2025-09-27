@@ -10,6 +10,10 @@ create_rosterplot(df_rosters, group_name, race_name, write = TRUE)
 \item{df_rosters}{A roster.}
 
 \item{group_name}{A group name.}
+
+\item{race_name}{A race name.}
+
+\item{write}{whether to write the plot to disk or not.}
 }
 \value{
 A plot object.
