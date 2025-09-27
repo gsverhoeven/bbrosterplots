@@ -1,0 +1,116 @@
+---
+title: "bbrosterplots"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::github_document:
+    toc: true
+    toc_depth: 3
+vignette: >
+  %\VignetteIndexEntry{bbrosterplots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = TRUE
+)
+```
+
+# Load package
+
+```{r}
+library(bbrosterplots)
+```
+
+## Read example data
+
+```{r}
+data(df_rosters) 
+data(df_rosters1)
+group_name <- "Super League S6"
+tournament_ruleset <- "EB25"
+races <- unique(df_rosters$roster.name)
+empty_out <- FALSE
+```
+
+## Current input data input format
+
+```{r}
+df_rosters %>% dplyr::filter(coach_name == "gsverhoeven")
+```
+
+# Add roster metadata
+
+This adds:
+* the cost for each player and inducement
+* for each skill or skill stack a skill color
+
+```{r}
+df_rosters <- add_roster_metadata(df_rosters)
+```
+
+# Output folder cleaning
+
+Optional step: Delete the output folder, then recreates it.
+
+```{r}
+if (empty_out) {
+  unlink(tournament_ruleset, recursive = TRUE)
+  dir.create(tournament_ruleset)
+}
+```
+
+Subset races to speed up testing.
+
+```{r}
+races <- races[1:3]
+df_rosters <- df_rosters %>%
+  dplyr::filter(roster.name %in% races)
+
+df_rosters1 <- df_rosters1 %>%
+  dplyr::filter(roster.name %in% races)
+```
+
+
+## Create heatmap plots
+
+```{r}
+create_rosterplot(df_rosters, group_name)
+```
+
+# Create skill tables
+
+For this we need the dataset without stacked skills.
+
+```{r}
+make_skill_table(df_rosters1, return_table = FALSE)
+```
+
+# Create rosterbook
+
+```{r}
+render_rosterbook()
+```
+
+# Complete workflow
+
+```{r eval = FALSE}
+library(bbrosterplots)
+# start with data in proper format
+data(df_rosters)
+data(df_rosters1)
+# add skill color, cost and cluster sort order
+df_rosters <- add_roster_metadata(df_rosters)
+# create rosterplots
+group_name <- unique(df_rosters$group_name)
+tournament_ruleset <- "EB25"
+create_rosterplot(df_rosters, group_name)
+# create skill tables
+make_skill_table(df_rosters1, return_table = FALSE)
+# render PDF
+render_rosterbook()
+```
+
