@@ -32,6 +32,9 @@ This needs to be part of the package, will not be part of the input data:
 
 ```{r}
 data(df_rosters) 
+df_rosters <- df_rosters %>%
+    dplyr::filter(is.na(banned_due_to_star_player) & is.na(banned_due_to_inducements) & is.na(banned_due_to_number_of_skills))
+
 data(df_rosters1)
 group_name <- "Super League S6"
 tournament_ruleset <- "EB25"
@@ -54,9 +57,20 @@ if (empty_out) {
 ```{r heatmap, warning = FALSE, message = FALSE}
 for(i in 1:length(races)){
   race_name <- races[i]
-  gridExtra::grid.arrange(create_rosterplot(df_rosters, group_name, race_name))
+  create_rosterplot(df_rosters, group_name, race_name)
   
 }
+```
+
+
+```{r}
+plot <- create_rosterplot(df_rosters, group_name, race_name)
+# first empty image is because func leaves THIS chunk in weird state
+plot
+```
+
+```{r}
+gridExtra::grid.arrange(plot)
 ```
 
 # Create skill tables
@@ -73,6 +87,7 @@ for(i in 1:length(races)){
 # Create rosterbook
 
 ```{r}
-rmarkdown::render("roster_book_template.Rmd")
+file.copy(from = system.file("extdata", "roster_book_template.Rmd", package = "bbrosterplots"), to = "roster_book.Rmd")
+rmarkdown::render("roster_book.Rmd")
 ```
 

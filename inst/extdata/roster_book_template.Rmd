@@ -24,6 +24,8 @@ group_name <- params$group_name
 tournament_ruleset <- params$tournament_ruleset
 
 data(df_rosters)
+df_rosters <- df_rosters %>%
+    dplyr::filter(is.na(banned_due_to_star_player) & is.na(banned_due_to_inducements) & is.na(banned_due_to_number_of_skills))
 
 races <- unique(df_rosters$roster.name)
 races <- races[1:3]
