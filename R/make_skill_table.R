@@ -45,10 +45,11 @@ make_skill_table <- function(race_name, df_rosters, return_table = FALSE) {
       values_from = team_picks,
       values_fill = list(team_picks = 0)
     )
+  table1 <- build_table(data = percentage_table, type = "percentage", save = TRUE)
+  table2 <- build_table(data = team_table, type = "team", save = TRUE)
+
   if(return_table){
-    return(  htmltools::tagList(
-      build_table(percentage_table, "percentage", TRUE),
-      build_table(team_table, "team", TRUE)
-    ))
+    return(  htmltools::tagList(table1, table2)
+             )
   }
 }
