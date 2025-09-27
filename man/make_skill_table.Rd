@@ -4,12 +4,12 @@
 \alias{make_skill_table}
 \title{Make Skill tables}
 \usage{
-make_skill_table(race_name, df_rosters, return_table = FALSE)
+make_skill_table(df_rosters, return_table = FALSE)
 }
 \arguments{
-\item{race_name}{A race name.}
-
 \item{df_rosters}{A roster.}
+
+\item{race_name}{A race name.}
 }
 \value{
 A tag list.
