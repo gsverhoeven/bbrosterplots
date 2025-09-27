@@ -4,12 +4,10 @@
 
 #' results in error: Error in tools::file_ext(output) == "png" && tools::file_ext(input) !=  :
 #' 'length = 8' in coercion to 'logical(1)': fixed using https://github.com/kcuilla/reactablefmtr/pull/59/commits/99cf8129c8975ec404a995d0d44a15d096fda603
-
-
 save_reactable <- function(input,
                            output,
                            ...) {
-
+  options(webshot.quiet = TRUE)
   if (typeof(input) != "character" && attr(input, "class")[1] != "reactable" || typeof(input) != "character" && is.null(attr(input, "class")[1])) {
 
     stop("input must be either a reactable table, .html file, or .Rmd file")
@@ -49,11 +47,11 @@ save_reactable <- function(input,
 
     invisible(file.remove(temp_html))
 
-    message("image saved to ", getwd(), "/", output)
+    #message("image saved to ", getwd(), "/", output)
 
   } else if (tools::file_ext(input) == "Rmd") {
 
-    message("Knitting R Markdown document...")
+    #message("Knitting R Markdown document...")
 
     webshot2::rmdshot(doc = input,
                       file = output,
