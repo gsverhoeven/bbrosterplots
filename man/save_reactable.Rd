@@ -10,4 +10,5 @@ save_reactable(input, output, ...)
 Note: webshot uses PhantomJS, which is a headless browser that stopped development in 2018. Please use webshot2, which uses Chromium-based browsers.
 results in error: Error in tools::file_ext(output) == "png" && tools::file_ext(input) !=  :
 'length = 8' in coercion to 'logical(1)': fixed using https://github.com/kcuilla/reactablefmtr/pull/59/commits/99cf8129c8975ec404a995d0d44a15d096fda603
+devtools::install_github("kcuilla/reactablefmtr") # DO NOT USE THE CRAN VERSION IT IS OUTDATED, HOWEVER THIS VERSION ALSO HAS A BUG WITH A PR FIX OPEN
 }
