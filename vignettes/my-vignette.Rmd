@@ -87,7 +87,6 @@ for(i in 1:length(races)){
 # Create rosterbook
 
 ```{r}
-file.copy(from = system.file("extdata", "roster_book_template.Rmd", package = "bbrosterplots"), to = "roster_book.Rmd")
-rmarkdown::render("roster_book.Rmd")
+render_rosterbook()
 ```
 

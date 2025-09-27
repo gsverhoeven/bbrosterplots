@@ -3,6 +3,7 @@
 export("%>%")
 export(create_rosterplot)
 export(make_skill_table)
+export(render_rosterbook)
 export(write_rosterplot)
 import(ggplot2)
 importFrom(dplyr,arrange)
