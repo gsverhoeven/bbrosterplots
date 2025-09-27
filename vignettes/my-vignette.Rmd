@@ -36,12 +36,34 @@ df_rosters <- df_rosters %>%
     dplyr::filter(is.na(banned_due_to_star_player) & is.na(banned_due_to_inducements) & is.na(banned_due_to_number_of_skills))
 
 data(df_rosters1)
+
+
 group_name <- "Super League S6"
 tournament_ruleset <- "EB25"
 races <- unique(df_rosters$roster.name)
 races <- races[1:3]
 empty_out <- FALSE
 ```
+
+## Define data input format
+
+```{r}
+df_rosters <- df_rosters %>% dplyr::ungroup() %>%
+  dplyr::select(number, position, roster.name, team_id, coach_name, group_name, skill_name, cnt)
+```
+
+```{r}
+df_rosters %>% dplyr::filter(coach_name == "gsverhoeven")
+```
+
+
+# Add roster metadata
+
+```{r}
+
+df_rosters <- add_roster_metadata(df_rosters)
+```
+
 
 Optional step: Delete the folder then recreates it, to ensure old pictures are not confused with the latest data
 
@@ -69,9 +91,6 @@ plot <- create_rosterplot(df_rosters, group_name, race_name)
 plot
 ```
 
-```{r}
-gridExtra::grid.arrange(plot)
-```
 
 # Create skill tables
 
@@ -87,6 +106,19 @@ for(i in 1:length(races)){
 # Create rosterbook
 
 ```{r}
+render_rosterbook()
+```
+```{r}
+library(bbrosterplots)
+# load data in proper format
+data(df_rosters)
+# add skill color, cost and cluster sort order
+df_rosters <- add_roster_metadata(df_rosters)
+# create rosterplots
+create_rosterplot(df_rosters, group_name, race_name)
+# create skill tables
+make_skill_table(race_name, df_rosters1, return_table = FALSE)
+# render PDF
 render_rosterbook()
 ```
 
