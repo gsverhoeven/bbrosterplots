@@ -1,7 +1,7 @@
 # Takes as argument a dataframe or matrix that contains x, y, and value col
 
 # returns the same object but with a column that contains the cluster order of the x-values
-
+.datatable.aware = TRUE
 
 hclust_order <- function(df,
                          xvar = "x",
@@ -11,8 +11,8 @@ hclust_order <- function(df,
                          dist_method = "euclidean",
                          dcast_fun.aggregate = NULL,
                          dcast_fill = 0) {
-  df <- data.table::as.data.table(df)
 
+  df <- data.table::as.data.table(df)
 
   # transform from long to wide using dcast
   formula_string <- paste0(xvar, " ~ ", yvar) # x vs y
@@ -42,7 +42,7 @@ hclust_order <- function(df,
   order_table <- data.table::data.table(first_col = obs_label,
                             cluster_order = 1:nrow(df_wide))
 
-  setnames(order_table, "first_col", xvar)
+  data.table::setnames(order_table, "first_col", xvar)
 
   # add ordering to original dataset
   data.table::setkeyv(order_table, xvar)  # it orders the x value
