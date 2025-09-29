@@ -23,6 +23,7 @@ knitr::opts_chunk$set(
 
 ```{r}
 library(bbrosterplots)
+library(tidyverse)
 ```
 
 ## Read example data
@@ -50,6 +51,9 @@ This adds:
 
 ```{r}
 df_rosters <- add_roster_metadata(df_rosters)
+
+# cost and sort order is missing for Gnomes
+df_rosters %>% filter(roster.name == "Gnome")
 ```
 
 # Output folder cleaning
