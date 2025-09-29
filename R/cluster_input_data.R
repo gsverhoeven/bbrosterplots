@@ -22,7 +22,7 @@ cluster_input_data <- function(df_rosters, group_name, race_name){
       select(team_id, cluster_order) %>%
       distinct() %>%
       right_join(df, by = "team_id")
-  } else {
+  } else { # if cost is missing or only 1 team
     df <- df %>%
       mutate(cluster_order = as.integer(as.factor(coach_name)))
   }
