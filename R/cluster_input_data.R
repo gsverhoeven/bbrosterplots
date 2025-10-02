@@ -30,7 +30,7 @@ cluster_input_data <- function(df_rosters, group_name, race_name){
 
 
   # Wrap title to ensure it does not overlap with caption (e.g. for Imperial Nobility)
-  plot_title <- stringr::str_wrap(paste0("FUMBBL ", group_name, " ", race_name, " rosters"), width = 35)
+  plot_title <- stringr::str_wrap(paste0(group_name, " ", race_name, " rosters"), width = 35)
 
   return(list(df, plot_title))
 
