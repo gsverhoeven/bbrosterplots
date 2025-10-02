@@ -4,7 +4,7 @@
 \alias{render_rosterbook}
 \title{Render rosterbook as PDF}
 \usage{
-render_rosterbook(target_dir = ".")
+render_rosterbook(target_dir = ".", params, refresh = TRUE)
 }
 \value{
 Nothing.
