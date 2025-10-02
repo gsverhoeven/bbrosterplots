@@ -31,8 +31,7 @@ library(tidyverse)
 ```{r}
 data(df_rosters) 
 data(df_rosters1)
-group_name <- "Super League S6"
-tournament_ruleset <- "EB25"
+
 races <- unique(df_rosters$roster.name)
 empty_out <- FALSE
 ```
@@ -56,17 +55,6 @@ df_rosters <- add_roster_metadata(df_rosters)
 df_rosters %>% filter(roster.name == "Gnome")
 ```
 
-# Output folder cleaning
-
-Optional step: Delete the output folder, then recreates it.
-
-```{r}
-if (empty_out) {
-  unlink(tournament_ruleset, recursive = TRUE)
-  dir.create(tournament_ruleset)
-}
-```
-
 Subset races to speed up testing.
 
 ```{r}
@@ -82,7 +70,7 @@ df_rosters1 <- df_rosters1 %>%
 ## Create heatmap plots
 
 ```{r}
-create_rosterplot(df_rosters, group_name)
+create_rosterplot(df_rosters)
 ```
 
 # Create skill tables
@@ -96,6 +84,8 @@ make_skill_table(df_rosters1, return_table = FALSE)
 # Create rosterbook
 
 ```{r}
+group_name <- "Super League S6"
+tournament_ruleset <- "EB25"
 render_rosterbook()
 ```
 
