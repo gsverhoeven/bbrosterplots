@@ -4,7 +4,12 @@
 \alias{create_rosterplot}
 \title{Create rosterplot}
 \usage{
-create_rosterplot(df_rosters, group_name, write = TRUE)
+create_rosterplot(
+  df_rosters,
+  group_name = "my_group",
+  write = TRUE,
+  tournament_ruleset = "my_ruleset"
+)
 }
 \arguments{
 \item{df_rosters}{A roster.}

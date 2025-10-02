@@ -7,7 +7,7 @@
 #' @returns A plot object.
 
 #' @export
-create_rosterplot <- function(df_rosters, group_name, write = TRUE){
+create_rosterplot <- function(df_rosters, group_name = "my_group", write = TRUE, tournament_ruleset = "my_ruleset"){
   races <- unique(df_rosters$roster.name)
   for(i in 1:length(races)){
     race_name <- races[i]
