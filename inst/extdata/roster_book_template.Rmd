@@ -31,7 +31,7 @@ tournament_ruleset <- params$tournament_ruleset
 if(is.null(params$races)){
   # use races from example data
   data(df_rosters)
-  races <- unique(df_rosters$roster.name)
+  races <- sort(unique(df_rosters$roster.name))
 } else {
   races <- params$races
 }
