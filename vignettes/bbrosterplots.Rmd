@@ -70,7 +70,7 @@ df_rosters1 <- df_rosters1 %>%
 ## Create heatmap plots
 
 ```{r}
-create_rosterplot(df_rosters)
+create_rosterplot(df_rosters, group_name = "Super league S6", tournament_ruleset = "EB25")
 ```
 
 # Create skill tables
@@ -78,15 +78,22 @@ create_rosterplot(df_rosters)
 For this we need the dataset without stacked skills.
 
 ```{r}
-make_skill_table(df_rosters1, return_table = FALSE)
+make_skill_table(df_rosters1 %>% filter(roster.name %in% races), group_name = "Super league S6", tournament_ruleset = "EB25", return_table = FALSE)
 ```
 
 # Create rosterbook
 
 ```{r}
-group_name <- "Super League S6"
-tournament_ruleset <- "EB25"
-render_rosterbook()
+res <- file.copy(from = system.file("extdata", "EB25.jpg", package = "bbrosterplots"), to = ".")
+
+
+render_rosterbook(params = list(group_name = "Super League S6", 
+                                tournament_ruleset = "EB25", 
+                                cover_image = "EB25.jpg",
+                                scale_cover_perc = "100%",                                
+                                races = c("Amazon", "Dwarf"), 
+                                perc = FALSE, 
+                                team = FALSE), refresh_rmd = TRUE)
 ```
 
 # Complete workflow
