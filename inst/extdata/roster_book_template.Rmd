@@ -1,6 +1,5 @@
 ---
 title: "Roster book `r params$group_name`"
-author: "Hiliadan & Gertjan Verhoeven"
 date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   pdf_document:
@@ -13,20 +12,25 @@ classoption: landscape
 
 ```{r logo, echo = FALSE, fig.align="center" ,  out.width = "150%"}
 library(bbrosterplots)
-knitr::include_graphics(system.file("extdata", "EB25.jpg", package = "bbrosterplots"))
+if (is.null(params$cover_image)){
+  knitr::include_graphics(system.file("extdata", "default_cover.jpg", package = "bbrosterplots"))
+} else{
+  knitr::include_graphics(params$cover_image)
+}
 ```
 
 ```{r preparation, include=FALSE}
+# unpack parameters
 group_name <- params$group_name
 tournament_ruleset <- params$tournament_ruleset
 
-data(df_rosters)
-
-races <- unique(df_rosters$roster.name)
-#races <- races[1:3]
-races <- sort(races)
-
-
+if(is.null(params$races)){
+  # use races from example data
+  data(df_rosters)
+  races <- unique(df_rosters$roster.name)
+} else {
+  races <- params$races
+}
 ```
 
 ```{r display, echo=FALSE, results='asis'}
