@@ -5,7 +5,7 @@
 
 #'@export
 add_roster_metadata <- function(df_rosters){
-  skill_colors <- readr::read_csv2(system.file("extdata" , "ref_bb_skill_colors.csv", package = "bbrosterplots"), show_col_types = FALSE)
+  skill_colors <- readr::read_delim(system.file("extdata" , "ref_bb_skill_colors.csv", package = "bbrosterplots"), show_col_types = FALSE)
 
   # match input data
   skill_colors <- skill_colors %>%
@@ -25,7 +25,7 @@ add_roster_metadata <- function(df_rosters){
     dplyr::left_join(skill_colors %>% dplyr::select(skill_name2, color), by = "skill_name2") %>%
     dplyr::select(-skill_name2)
 
-  rosters_cost <- readr::read_csv2(system.file("extdata" , "ref_bb_rosters_cost.csv", package = "bbrosterplots"), show_col_types = FALSE)
+  rosters_cost <- readr::read_delim(system.file("extdata" , "ref_bb_rosters_cost.csv", package = "bbrosterplots"), show_col_types = FALSE)
 
   df_rosters <- df_rosters %>%
     dplyr::left_join(rosters_cost %>% dplyr::select(position, roster.name, sort_order, cost), by = c("position", "roster.name") )
