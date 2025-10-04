@@ -57,6 +57,7 @@ build_table <- function(data, type, group_name, race_name, save, tournament_rule
   )
 
   if(save == TRUE) {
+    dir.create(tournament_ruleset,  showWarnings = FALSE)
     save_reactable(table,
                    gsub(" ", "_", paste0(tournament_ruleset, "/", group_name, "_", type, "-stat_plot_", race_name, ".png")))
   }
