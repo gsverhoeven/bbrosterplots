@@ -6,14 +6,24 @@
 #'@export
 add_roster_metadata <- function(df_rosters){
   skill_colors <- readr::read_csv2(system.file("extdata" , "ref_bb_skill_colors.csv", package = "bbrosterplots"), show_col_types = FALSE)
-  # fix data error
-  skill_colors <- skill_colors[!duplicated(skill_colors$skill_name),]
+
   # match input data
   skill_colors <- skill_colors %>%
     dplyr::mutate(skill_name = ifelse(is.na(skill_name), "", skill_name))
 
+  # create tmp skill name variable without spaces and caps in both tables before joining
+  skill_colors <- skill_colors %>%
+    mutate(skill_name2 = stringr::str_replace_all(skill_name, fixed(" "), "")) %>%
+    mutate(skill_name2 = stringr::str_to_lower(skill_name2))
+
   df_rosters <- df_rosters %>%
-    dplyr::left_join(skill_colors %>% dplyr::select(skill_name, color), by = "skill_name")
+    mutate(skill_name2 = stringr::str_replace_all(skill_name, fixed(" "), "")) %>%
+    mutate(skill_name2 = stringr::str_to_lower(skill_name2))
+
+  # join then drop tmp variable
+  df_rosters <- df_rosters %>%
+    dplyr::left_join(skill_colors %>% dplyr::select(skill_name2, color), by = "skill_name2") %>%
+    dplyr::select(-skill_name2)
 
   rosters_cost <- readr::read_csv2(system.file("extdata" , "ref_bb_rosters_cost.csv", package = "bbrosterplots"), show_col_types = FALSE)
 
