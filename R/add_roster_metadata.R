@@ -27,8 +27,19 @@ add_roster_metadata <- function(df_rosters){
 
   rosters_cost <- readr::read_delim(system.file("extdata" , "ref_bb_rosters_cost.csv", package = "bbrosterplots"), show_col_types = FALSE)
 
+  rosters_cost <- rosters_cost %>%
+    mutate(position2 = stringr::str_replace_all(position, fixed(" "), "")) %>%
+    mutate(position2 = stringr::str_replace_all(position2, "-", "")) %>%
+    mutate(position2 = stringr::str_to_lower(position2))
+
   df_rosters <- df_rosters %>%
-    dplyr::left_join(rosters_cost %>% dplyr::select(position, roster.name, sort_order, cost), by = c("position", "roster.name") )
+    mutate(position2 = stringr::str_replace_all(position, fixed(" "), "")) %>%
+    mutate(position2 = stringr::str_replace_all(position2, "-", "")) %>%
+    mutate(position2 = stringr::str_to_lower(position2))
+
+  df_rosters <- df_rosters %>%
+    dplyr::left_join(rosters_cost %>% dplyr::select(position2, roster.name, sort_order, cost), by = c("position2", "roster.name") ) %>%
+    select(-position2)
 
   # add player_id (remove this later, now needed downstream)
   df_rosters <- df_rosters %>%
