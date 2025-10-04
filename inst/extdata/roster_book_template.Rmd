@@ -46,7 +46,7 @@ for (race_name in races) {
   out <- c(out, sprintf(
     "\\begin{figure}[H]\n\\centering\n\\includegraphics[width=1.2\\textwidth]{%s}\n\\caption{%s}\n\\end{figure}\n\\newpage\n",
     gsub(" ", "_", roster),
-    esc(sprintf("%s %s – Roster overview.", group_name, race_name))
+    esc(sprintf("%s %s – Roster overview.", stringr::str_replace_all(group_name, "_", " "), race_name))
   ))
   
   if (params$perc == TRUE){
@@ -56,7 +56,7 @@ for (race_name in races) {
       gsub(" ", "_", perc),
       esc(sprintf(
         "%s %s – Percentage of skill pick by position. The chart displays the %% of players by position (type) which have a certain skill or no skill. If the total %% is above 100%%, it means some skill stacking is happening.",
-        group_name, race_name
+        stringr::str_replace_all(group_name, "_", " "), race_name
       ))
     ))
   }
@@ -67,7 +67,7 @@ for (race_name in races) {
       gsub(" ", "_", team),
       esc(sprintf(
         "%s %s – Distribution of team skills by position. The chart displays the average number of skills per position. The total should be equal to the maximum number of skills for the roster.",
-        group_name, race_name
+        stringr::str_replace_all(group_name, "_", " "), race_name
         ))
     ))
   }
