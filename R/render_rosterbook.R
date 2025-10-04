@@ -3,7 +3,7 @@
 #' @returns Nothing.
 
 #' @export
-render_rosterbook <- function(target_dir = ".", params, refresh = TRUE){
+render_rosterbook <- function(target_dir = ".", params, refresh_rmd = TRUE){
   if(refresh){
     file.copy(from = system.file("extdata", "roster_book_template.Rmd", package = "bbrosterplots"), to = "roster_book.Rmd", overwrite = TRUE)
   }
