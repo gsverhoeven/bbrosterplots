@@ -4,7 +4,12 @@
 \alias{make_skill_table}
 \title{Make Skill tables}
 \usage{
-make_skill_table(df_rosters, return_table = FALSE)
+make_skill_table(
+  df_rosters,
+  tournament_ruleset = "my_ruleset",
+  group_name = "my_group",
+  return_table = FALSE
+)
 }
 \arguments{
 \item{df_rosters}{A roster.}

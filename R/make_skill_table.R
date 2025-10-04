@@ -5,7 +5,7 @@
 #' @returns A tag list.
 
 #' @export
-make_skill_table <- function(df_rosters, return_table = FALSE) {
+make_skill_table <- function(df_rosters, tournament_ruleset = "my_ruleset", group_name = "my_group", return_table = FALSE) {
   races <- unique(df_rosters$roster.name)
   for(i in 1:length(races)){
     race_name <- races[i]
@@ -49,8 +49,8 @@ make_skill_table <- function(df_rosters, return_table = FALSE) {
         values_from = team_picks,
         values_fill = list(team_picks = 0)
       )
-    table1 <- build_table(data = percentage_table, type = "percentage", group_name, race_name, save = TRUE)
-    table2 <- build_table(data = team_table, type = "team", group_name, race_name, save = TRUE)
+    table1 <- build_table(data = percentage_table, type = "percentage", group_name, race_name, tournament_ruleset, save = TRUE)
+    table2 <- build_table(data = team_table, type = "team", group_name, race_name, tournament_ruleset, save = TRUE)
   }
   if(return_table){
     return(  htmltools::tagList(table1, table2)
