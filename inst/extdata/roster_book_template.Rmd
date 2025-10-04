@@ -9,9 +9,13 @@ header-includes:
 classoption: landscape
 ---
 
-
-```{r logo, echo = FALSE, fig.align="center" ,  out.width = "150%"}
+```{r echo = FALSE}
 library(bbrosterplots)
+```
+
+
+```{r logo, echo = FALSE, fig.align="center" ,  out.width = params$scale_cover_perc}
+
 if (is.null(params$cover_image)){
   knitr::include_graphics(system.file("extdata", "default_cover.jpg", package = "bbrosterplots"))
 } else{
