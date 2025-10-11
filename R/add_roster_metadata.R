@@ -6,6 +6,8 @@
 #'@export
 add_roster_metadata <- function(df_rosters){
   skill_colors <- readr::read_delim(system.file("extdata" , "ref_bb_skill_colors.csv", package = "bbrosterplots"), show_col_types = FALSE)
+  # remove existing grouping from tibble
+  df_rosters <- df_rosters %>% ungroup()
 
   # match input data
   skill_colors <- skill_colors %>%
@@ -41,8 +43,10 @@ add_roster_metadata <- function(df_rosters){
     dplyr::left_join(rosters_cost %>% dplyr::select(position2, roster.name, sort_order, cost), by = c("position2", "roster.name") ) %>%
     select(-position2)
 
-  # add player_id (remove this later, now needed downstream)
-  df_rosters <- df_rosters %>%
-    dplyr::mutate(player_id = 1:nrow(df_rosters))
+  # add player_id if column does not exist (remove this later, now needed downstream)
+  if (!("player_id" %in% names(df_rosters))){
+    df_rosters <- df_rosters %>%
+      dplyr::mutate(player_id = 1:nrow(df_rosters))
+  }
   return(df_rosters)
 }
