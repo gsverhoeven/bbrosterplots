@@ -2,7 +2,6 @@ cluster_input_data <- function(df_rosters, group_name, race_name){
 
   df <- df_rosters %>%
     filter(roster.name == race_name) %>%
-    filter(!(position %in% c("cheerleaders", "assistantCoaches"))) %>%
     group_by(team_id, coach_name, player_id, position, sort_order, number, skill_name, color) %>% # skill stacking
     summarise(cnt = max(cnt), cost = max(cost)) %>%
     group_by(team_id, coach_name, player_id, position, sort_order, skill_name, color) %>%
