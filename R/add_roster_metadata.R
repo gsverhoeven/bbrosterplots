@@ -5,6 +5,9 @@
 
 #'@export
 add_roster_metadata <- function(df_rosters){
+  df_rosters <- df_rosters %>%
+    dplyr::select_if(!names(.) %in% c('color', 'sort_order', 'cost'))
+
   skill_colors <- readr::read_delim(system.file("extdata" , "ref_bb_skill_colors.csv", package = "bbrosterplots"), show_col_types = FALSE)
   # remove existing grouping from tibble
   df_rosters <- df_rosters %>% ungroup()
