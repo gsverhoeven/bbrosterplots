@@ -32,8 +32,10 @@ Imports:
     tidyr,
     webshot2
 Suggests: 
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
+Config/testthat/edition: 3

@@ -1,4 +1,3 @@
-* introduce workflow with input data in input, rosters in work and rosterbook in output.
 * add tests
 * setup CI/CD to test on other OSes
 * check why we have player_id in the input data
