@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 ```{r}
 library(bbrosterplots)
-library(tidyverse)
+library(dplyr)
 ```
 
 ## Read example data
@@ -57,7 +57,7 @@ This adds:
 ```{r}
 df_rosters <- add_roster_metadata(df_rosters)
 
-df_rosters %>% filter(roster.name == "Gnome")
+df_rosters %>% dplyr::filter(roster.name == "Gnome")
 ```
 
 Subset races to speed up testing.
