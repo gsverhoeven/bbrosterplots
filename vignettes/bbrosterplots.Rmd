@@ -36,7 +36,13 @@ races <- unique(df_rosters$roster.name)
 empty_out <- FALSE
 ```
 
-## Current input data input format
+## Required input data input format
+
+The `bbrosterplots` packages expects input data that consists of 8 columns / variables, with pre-specified column names.
+
+The `position` column naming requires the official roster position naming. It has some allowance for variants such as "Re-rolls" , "rerolls" and "Rerolls" .
+
+PM add more detailed description of the input data format
 
 ```{r}
 df_rosters %>% dplyr::filter(coach_name == "gsverhoeven")
@@ -51,7 +57,6 @@ This adds:
 ```{r}
 df_rosters <- add_roster_metadata(df_rosters)
 
-# cost and sort order is missing for Gnomes
 df_rosters %>% filter(roster.name == "Gnome")
 ```
 
@@ -78,20 +83,20 @@ create_rosterplot(df_rosters, group_name = "Super league S6", tournament_ruleset
 For this we need the dataset without stacked skills.
 
 ```{r}
-make_skill_table(df_rosters1 %>% filter(roster.name %in% races), group_name = "Super league S6", tournament_ruleset = "EB25", return_table = FALSE)
+create_skill_table(df_rosters1 %>% filter(roster.name %in% races), group_name = "Super league S6", tournament_ruleset = "EB25", return_table = FALSE)
 ```
 
 # Create rosterbook
 
 ```{r}
-res <- file.copy(from = system.file("extdata", "EB25.jpg", package = "bbrosterplots"), to = ".")
+res <- file.copy(from = system.file("extdata", "EB25.jpg", package = "bbrosterplots"), to = "output/")
 
 
 render_rosterbook(params = list(group_name = "Super League S6", 
                                 tournament_ruleset = "EB25", 
                                 cover_image = "EB25.jpg",
                                 scale_cover_perc = "100%",                                
-                                races = c("Amazon", "Dwarf"), 
+                                races = c("Khorne", "Dwarf"), 
                                 perc = FALSE, 
                                 team = FALSE), refresh_rmd = TRUE)
 ```
@@ -110,7 +115,7 @@ group_name <- unique(df_rosters$group_name)
 tournament_ruleset <- "EB25"
 create_rosterplot(df_rosters, group_name)
 # create skill tables
-make_skill_table(df_rosters1, return_table = FALSE)
+create_skill_table(df_rosters1, return_table = FALSE)
 # render PDF
 render_rosterbook()
 ```

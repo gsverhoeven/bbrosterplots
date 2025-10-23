@@ -5,7 +5,7 @@
 #' @returns A tag list.
 
 #' @export
-make_skill_table <- function(df_rosters, tournament_ruleset = "my_ruleset", group_name = "my_group", return_table = FALSE) {
+create_skill_table <- function(df_rosters, tournament_ruleset = "my_ruleset", group_name = "my_group", return_table = FALSE) {
   races <- unique(df_rosters$roster.name)
   for(i in 1:length(races)){
     race_name <- races[i]
