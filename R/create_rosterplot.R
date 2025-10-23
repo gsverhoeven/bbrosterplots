@@ -30,7 +30,7 @@ create_rosterplot <- function(df_rosters, group_name = "my_group", write = TRUE,
       ncol = 2,
       widths = c(3, 1)
     )
-    plotname <- paste0(tournament_ruleset, "/", group_name, "_roster_plot_", race_name, ".png")
+    plotname <- paste0('output/', tournament_ruleset, "/", group_name, "_roster_plot_", race_name, ".png")
     write_rosterplot(final_plot, plotname, n_legend_items)
   }
   # draw plot
