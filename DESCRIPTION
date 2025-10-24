@@ -13,7 +13,7 @@ Authors@R: c(
 Description: This package allows creation of a PDF rosterbook containing all different races that participated in a tournament.
   For each race it makes a plot (a clustered heatmap) displaying the roster as a colorcoded matrix, 
   where teams that are similar (based on a cost weighted similarity score) are put side by side.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/gsverhoeven/bbrosterplots
@@ -30,6 +30,7 @@ Imports:
     magrittr,
     reactable,
     readr,
+    rlang,
     tidyr,
     webshot2
 Suggests: 
