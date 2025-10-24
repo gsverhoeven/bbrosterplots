@@ -13,7 +13,7 @@ create_skill_table <- function(df_rosters, tournament_ruleset = "my_ruleset", gr
     race_name <- races[i]
     print(race_name)
     df <- df_rosters %>%
-      filter(.data$roster.name == .data$race_name & .data$position != "" & .data$number != 99) %>%
+      filter(.data$roster.name == race_name & .data$position != "" & .data$number != 99) %>%
       # Drop rows with no skill if at least one other skill is filled for the player (to solve a bug with multiple rows for some players with only 1 skill)
       group_by(.data$player_id) %>%
       mutate(all_empty = all(.data$name == "" | is.na(.data$name))) %>%

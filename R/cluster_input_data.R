@@ -1,7 +1,7 @@
 cluster_input_data <- function(df_rosters, group_name, race_name){
 
   df <- df_rosters %>%
-    filter(.data$roster.name == .data$race_name) %>%
+    filter(.data$roster.name == race_name) %>%
     group_by(.data$team_id, .data$coach_name, .data$player_id, .data$position, .data$sort_order, .data$number, .data$skill_name, .data$color) %>% # skill stacking
     summarise(cnt = max(.data$cnt), cost = max(.data$cost)) %>%
     group_by(.data$team_id, .data$coach_name, .data$player_id, .data$position, .data$sort_order, .data$skill_name, .data$color) %>%
