@@ -2,7 +2,7 @@
 #'
 #' @param df_rosters A roster.
 #' @param group_name A group name.
-#' @param race_name A race name.
+#' @param tournament_ruleset A ruleset name.
 #' @param write whether to write the plot to disk or not.
 #' @returns A plot object.
 

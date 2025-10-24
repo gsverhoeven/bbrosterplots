@@ -4,7 +4,14 @@
 \alias{render_rosterbook}
 \title{Render rosterbook as PDF}
 \usage{
-render_rosterbook(target_dir = ".", params, refresh_rmd = TRUE)
+render_rosterbook(target_dir = "output/", params, refresh_rmd = TRUE)
+}
+\arguments{
+\item{target_dir}{dir where the roster book is rendered.}
+
+\item{params}{A list of parameters to customize the roster book.}
+
+\item{refresh_rmd}{Controls if the template is refreshed.}
 }
 \value{
 Nothing.

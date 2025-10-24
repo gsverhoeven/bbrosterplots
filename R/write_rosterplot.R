@@ -1,10 +1,3 @@
-#' Write rosterplot
-#'
-#' @param plot A plot object
-#' @param plotname A text string.
-#' @returns Nothing.
-#' @export
-
 write_rosterplot <- function(plot, plotname, n_legend_items, base_height = 6.3, extra_height_per_item = 0.25, verbose = FALSE){
   # Set dynamic height: Base height + extra height per legend item
   # 1 = 300 px, usually a race requires 1500px to be displayed properly

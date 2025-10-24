@@ -14,7 +14,11 @@ create_skill_table(
 \arguments{
 \item{df_rosters}{A roster.}
 
-\item{race_name}{A race name.}
+\item{tournament_ruleset}{A ruleset name.}
+
+\item{group_name}{A group name.}
+
+\item{return_table}{If a table is returned.}
 }
 \value{
 A tag list.

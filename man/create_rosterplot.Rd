@@ -18,7 +18,7 @@ create_rosterplot(
 
 \item{write}{whether to write the plot to disk or not.}
 
-\item{race_name}{A race name.}
+\item{tournament_ruleset}{A ruleset name.}
 }
 \value{
 A plot object.
