@@ -18,11 +18,11 @@ add_roster_metadata <- function(df_rosters){
 
   # create tmp skill name variable without spaces and caps in both tables before joining
   skill_colors <- skill_colors %>%
-    mutate(skill_name2 = stringr::str_replace_all(skill_name, fixed(" "), "")) %>%
+    mutate(skill_name2 = stringr::str_replace_all(skill_name, stringr::fixed(" "), "")) %>%
     mutate(skill_name2 = stringr::str_to_lower(skill_name2))
 
   df_rosters <- df_rosters %>%
-    mutate(skill_name2 = stringr::str_replace_all(skill_name, fixed(" "), "")) %>%
+    mutate(skill_name2 = stringr::str_replace_all(skill_name, stringr::fixed(" "), "")) %>%
     mutate(skill_name2 = stringr::str_to_lower(skill_name2))
 
   # join then drop tmp variable
@@ -33,12 +33,12 @@ add_roster_metadata <- function(df_rosters){
   rosters_cost <- readr::read_delim(system.file("extdata" , "ref_bb_rosters_cost.csv", package = "bbrosterplots"), show_col_types = FALSE)
 
   rosters_cost <- rosters_cost %>%
-    mutate(position2 = stringr::str_replace_all(position, fixed(" "), "")) %>%
+    mutate(position2 = stringr::str_replace_all(position, stringr::fixed(" "), "")) %>%
     mutate(position2 = stringr::str_replace_all(position2, "-", "")) %>%
     mutate(position2 = stringr::str_to_lower(position2))
 
   df_rosters <- df_rosters %>%
-    mutate(position2 = stringr::str_replace_all(position, fixed(" "), "")) %>%
+    mutate(position2 = stringr::str_replace_all(position, stringr::fixed(" "), "")) %>%
     mutate(position2 = stringr::str_replace_all(position2, "-", "")) %>%
     mutate(position2 = stringr::str_to_lower(position2))
 
