@@ -1,8 +1,8 @@
 #' @import ggplot2
 create_main_plot <- function(df, plot_title){
-  main_plot <- ggplot(df, aes(x = reorder(factor(coach_team_id), cluster_order), y = reorder(paste(position, nr), -sort_order))) +
-    geom_tile(aes(fill = color), color = "black") +
-    geom_text(aes(label = n), color = "white") +
+  main_plot <- ggplot(df, aes(x = reorder(factor(.data$coach_team_id), .data$cluster_order), y = reorder(paste(.data$position, .data$nr), -.data$sort_order))) +
+    geom_tile(aes(fill = .data$color), color = "black") +
+    geom_text(aes(label = .data$n), color = "white") +
     scale_fill_identity(breaks = c(df$color),
                         labels = c(df$skill_name)) +
     coord_fixed() +
