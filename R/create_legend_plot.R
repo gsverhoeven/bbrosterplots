@@ -1,4 +1,3 @@
-#' @import ggplot2
 create_legend_plot <- function(df, n_legend_items){
   # Sort skills alphabetically to display them sorted in the caption
   df <- df %>%

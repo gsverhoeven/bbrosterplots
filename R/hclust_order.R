@@ -1,6 +1,7 @@
 # Takes as argument a dataframe or matrix that contains x, y, and value col
 
 # returns the same object but with a column that contains the cluster order of the x-values
+
 .datatable.aware = TRUE
 
 hclust_order <- function(df,
