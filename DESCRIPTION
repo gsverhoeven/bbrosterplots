@@ -26,15 +26,16 @@ Imports:
     htmltools,
     htmlwidgets,
     janitor,
-    knitr,
     magrittr,
     reactable,
     readr,
     rlang,
     tidyr,
+    stringr,
     webshot2
 Suggests: 
     rmarkdown,
+    knitr,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Depends: 
