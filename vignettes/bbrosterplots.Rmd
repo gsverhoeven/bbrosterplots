@@ -88,7 +88,7 @@ create_skill_table(df_rosters1 %>% filter(roster.name %in% races), group_name = 
 
 # Create rosterbook
 
-```{r}
+```{r eval = FALSE}
 res <- file.copy(from = system.file("extdata", "EB25.jpg", package = "bbrosterplots"), to = "output/")
 
 
