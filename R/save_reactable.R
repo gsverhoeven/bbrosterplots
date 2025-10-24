@@ -2,6 +2,7 @@ save_reactable <- function(input,
                            output,
                            ...) {
   options(webshot.quiet = TRUE)
+  options(chromote.timeout = 60)
   if (typeof(input) != "character" && attr(input, "class")[1] != "reactable" || typeof(input) != "character" && is.null(attr(input, "class")[1])) {
 
     stop("input must be either a reactable table, .html file, or .Rmd file")
