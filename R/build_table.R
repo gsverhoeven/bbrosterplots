@@ -7,14 +7,14 @@ build_table <- function(data, type, group_name, race_name, save, tournament_rule
       case_when(Skill == "No skill" ~ 1,
                 Skill == "Total" ~ 3,
                 TRUE ~ 2),
-      desc(Total)
+      dplyr::desc(.data$Total)
     )
 
-  # Round because save_reactable() otherwise messes up the formating of digits
+  # Round because save_reactable() otherwise messes up the formatting of digits
   if (type == "percentage") {
-    data <- data %>% mutate(across(where(is.numeric), ~ round(., 0)))
+    data <- data %>% mutate(dplyr::across(dplyr::where(is.numeric), ~ round(., 0)))
   } else {
-    data <- data %>% mutate(across(where(is.numeric), ~ round(., 1)))
+    data <- data %>% mutate(dplyr::across(dplyr::where(is.numeric), ~ round(., 1)))
   }
 
   default_col_format <- if (type == "percentage") {
@@ -26,7 +26,7 @@ build_table <- function(data, type, group_name, race_name, save, tournament_rule
   }
 
   table <- reactable::reactable(
-    data %>% select(-Total), # select to remove for team_table (to be done)
+    data %>% select(-.data$Total), # select to remove for team_table (to be done)
     # searchable = TRUE,
     sortable = TRUE,
     # filterable = TRUE,
