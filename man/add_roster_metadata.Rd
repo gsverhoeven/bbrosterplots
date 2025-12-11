@@ -4,7 +4,7 @@
 \alias{add_roster_metadata}
 \title{Add metadata to roster}
 \usage{
-add_roster_metadata(df_rosters)
+add_roster_metadata(df_rosters, edition_val = "bb2020")
 }
 \arguments{
 \item{df_rosters}{A (set of) roster.}

@@ -3,7 +3,7 @@
 #' @param df_rosters A (set of) roster.
 #' @returns A set of rosters with color, cost and sort order added
 #'@export
-add_roster_metadata <- function(df_rosters){
+add_roster_metadata <- function(df_rosters, edition_val = "bb2020"){
   df_rosters <- df_rosters %>%
     dplyr::select_if(!names(.) %in% c('color', 'sort_order', 'cost'))
 
@@ -32,6 +32,7 @@ add_roster_metadata <- function(df_rosters){
   rosters_cost <- readr::read_delim(system.file("extdata" , "ref_bb_rosters_cost.csv", package = "bbrosterplots"), show_col_types = FALSE)
 
   rosters_cost <- rosters_cost %>%
+    filter(edition == edition_val) %>%
     mutate(position2 = stringr::str_replace_all(.data$position, stringr::fixed(" "), "")) %>%
     mutate(position2 = stringr::str_replace_all(.data$position2, "-", "")) %>%
     mutate(position2 = stringr::str_to_lower(.data$position2))
