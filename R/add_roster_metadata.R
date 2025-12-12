@@ -13,6 +13,7 @@ add_roster_metadata <- function(df_rosters, edition_val = "bb2020"){
 
   # match input data
   skill_colors <- skill_colors %>%
+    filter(edition == edition_val) %>%
     dplyr::mutate(skill_name = ifelse(is.na(.data$skill_name), "", .data$skill_name))
 
   # create tmp skill name variable without spaces and caps in both tables before joining
@@ -22,6 +23,7 @@ add_roster_metadata <- function(df_rosters, edition_val = "bb2020"){
 
   df_rosters <- df_rosters %>%
     mutate(skill_name2 = stringr::str_replace_all(.data$skill_name, stringr::fixed(" "), "")) %>%
+    mutate(skill_name2 = stringr::str_replace_all(.data$skill_name2, stringr::fixed(","), "")) %>%
     mutate(skill_name2 = stringr::str_to_lower(.data$skill_name2))
 
   # join then drop tmp variable
