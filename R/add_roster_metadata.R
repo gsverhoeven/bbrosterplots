@@ -13,7 +13,7 @@ add_roster_metadata <- function(df_rosters, edition_val = "bb2020"){
 
   # match input data
   skill_colors <- skill_colors %>%
-    filter(edition == edition_val) %>%
+    filter(.data$edition == edition_val) %>%
     dplyr::mutate(skill_name = ifelse(is.na(.data$skill_name), "", .data$skill_name))
 
   # create tmp skill name variable without spaces and caps in both tables before joining
@@ -34,7 +34,7 @@ add_roster_metadata <- function(df_rosters, edition_val = "bb2020"){
   rosters_cost <- readr::read_delim(system.file("extdata" , "ref_bb_rosters_cost.csv", package = "bbrosterplots"), show_col_types = FALSE)
 
   rosters_cost <- rosters_cost %>%
-    filter(edition == edition_val) %>%
+    filter(.data$edition == edition_val) %>%
     mutate(position2 = stringr::str_replace_all(.data$position, stringr::fixed(" "), "")) %>%
     mutate(position2 = stringr::str_replace_all(.data$position2, "-", "")) %>%
     mutate(position2 = stringr::str_to_lower(.data$position2))
