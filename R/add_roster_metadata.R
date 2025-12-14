@@ -1,6 +1,7 @@
 #' Add metadata to roster
 #'
 #' @param df_rosters A (set of) roster.
+#' @param edition_val Blood Bowl edition, either bb2020 (default) or bb2025.
 #' @returns A set of rosters with color, cost and sort order added
 #'@export
 add_roster_metadata <- function(df_rosters, edition_val = "bb2020"){
