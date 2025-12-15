@@ -8,6 +8,8 @@ add_roster_metadata(df_rosters, edition_val = "bb2020")
 }
 \arguments{
 \item{df_rosters}{A (set of) roster.}
+
+\item{edition_val}{Blood Bowl edition, either bb2020 (default) or bb2025.}
 }
 \value{
 A set of rosters with color, cost and sort order added
