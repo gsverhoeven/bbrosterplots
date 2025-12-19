@@ -12,7 +12,17 @@ create_rosterplot <- function(df_rosters, group_name = "my_group", write = TRUE,
   for(i in 1:length(races)){
     race_name <- races[i]
     print(race_name)
-    out_list <- cluster_input_data(df_rosters, group_name, race_name)
+    # datawrangling -> move to separate function?
+    df <- df_rosters %>%
+      filter(.data$roster.name == race_name) %>% # aggregate to remove duplicate rows
+      group_by(.data$team_id, .data$coach_name, .data$player_id, .data$position, .data$sort_order, .data$number, .data$skill_name, .data$color) %>%
+      summarise(cnt = max(.data$cnt), cost = max(.data$cost)) %>% # sum cnt and cnt*cost
+      group_by(.data$team_id, .data$coach_name, .data$player_id, .data$position, .data$sort_order, .data$skill_name, .data$color) %>%
+      summarise(n = sum(.data$cnt), cost = .data$cost * sum(.data$cnt)) %>% # add positional numbering, use reframe()
+      group_by(.data$team_id, .data$coach_name, .data$position, .data$sort_order, .data$n) %>%
+      reframe(nr = row_number(), skill_name = .data$skill_name, color = .data$color, cost = .data$cost)
+
+    out_list <- cluster_input_data(df, group_name, race_name)
     df <- out_list[[1]]
     plot_title <- out_list[[2]]
 

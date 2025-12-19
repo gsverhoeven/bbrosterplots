@@ -19,6 +19,7 @@
 #' @importFrom dplyr row_number
 #' @importFrom dplyr select
 #' @importFrom dplyr summarise
+#' @importFrom dplyr reframe
 #' @importFrom dplyr ungroup
 ## usethis namespace: end
 NULL
