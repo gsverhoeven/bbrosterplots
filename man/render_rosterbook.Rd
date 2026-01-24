@@ -9,7 +9,7 @@ render_rosterbook(target_dir = "output/", params, refresh_rmd = TRUE)
 \arguments{
 \item{target_dir}{dir where the roster book is rendered.}
 
-\item{params}{A list of parameters to customize the roster book.}
+\item{params}{A list of parameters to customize the roster book. See example below for the available parameters.}
 
 \item{refresh_rmd}{Controls if the template is refreshed.}
 }
@@ -18,4 +18,13 @@ Nothing.
 }
 \description{
 Render rosterbook as PDF
+}
+\examples{
+render_rosterbook(params = list(group_name = "Super League S6",
+                                tournament_ruleset = "EB25",
+                                cover_image = "EB25.jpg",
+                                scale_cover_perc = "100\%",
+                                races = c("Khorne", "Dwarf"),
+                                perc = FALSE,
+                                team = FALSE), refresh_rmd = TRUE)
 }

@@ -1,9 +1,17 @@
 #' Render rosterbook as PDF
 #'
 #' @param target_dir dir where the roster book is rendered.
-#' @param params A list of parameters to customize the roster book.
+#' @param params A list of parameters to customize the roster book. See example below for the available parameters.
 #' @param refresh_rmd Controls if the template is refreshed.
 #' @returns Nothing.
+#' @examples
+#' render_rosterbook(params = list(group_name = "Super League S6",
+#'                                 tournament_ruleset = "EB25",
+#'                                 cover_image = "EB25.jpg",
+#'                                 scale_cover_perc = "100%",
+#'                                 races = c("Khorne", "Dwarf"),
+#'                                 perc = FALSE,
+#'                                 team = FALSE), refresh_rmd = TRUE)
 
 #' @export
 render_rosterbook <- function(target_dir = "output/", params, refresh_rmd = TRUE){

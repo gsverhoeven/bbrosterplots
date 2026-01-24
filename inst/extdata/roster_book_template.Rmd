@@ -13,20 +13,20 @@ classoption: landscape
 library(bbrosterplots)
 ```
 
-
-```{r logo, echo = FALSE, fig.align="center" ,  out.width = params$scale_cover_perc}
-
-if (is.null(params$cover_image)){
-  knitr::include_graphics(system.file("extdata", "default_cover.jpg", package = "bbrosterplots"))
-} else{
-  knitr::include_graphics(params$cover_image)
-}
-```
-
-```{r preparation, include=FALSE}
+```{r unpack, include=FALSE}
 # unpack parameters
+
+if(is.null(params$group_name)){
+  group_name <- "my_group"
+} else {
 group_name <- params$group_name
+}
+
+if(is.null(params$tournament_ruleset)){
+  tournament_ruleset <- "my_ruleset"
+} else {
 tournament_ruleset <- params$tournament_ruleset
+}
 
 if(is.null(params$races)){
   # use races from example data
@@ -35,7 +35,30 @@ if(is.null(params$races)){
 } else {
   races <- params$races
 }
+
+if(is.null(params$cover_image)){
+  params$cover_image <- system.file("extdata", "default_cover.jpg", package = "bbrosterplots")
+}
+if(is.null(params$scale_cover_perc)){
+  params$scale_cover_perc = "100%"
+}
+
+if(is.null(params$perc)){
+  params$perc <- FALSE
+} 
+
+if(is.null(params$team)){
+  params$team <- FALSE
+} 
 ```
+
+```{r logo, echo = FALSE, fig.align="center" ,  out.width = params$scale_cover_perc}
+
+knitr::include_graphics(params$cover_image)
+
+```
+
+
 
 ```{r display, echo=FALSE, results='asis'}
 esc <- function(x) gsub("%", "\\\\%", x)
