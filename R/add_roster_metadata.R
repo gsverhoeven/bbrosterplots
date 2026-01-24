@@ -38,11 +38,13 @@ add_roster_metadata <- function(df_rosters, edition_val = "bb2020"){
     filter(.data$edition == edition_val) %>%
     mutate(position2 = stringr::str_replace_all(.data$position, stringr::fixed(" "), "")) %>%
     mutate(position2 = stringr::str_replace_all(.data$position2, "-", "")) %>%
+    mutate(position2 = stringr::str_replace_all(.data$position2, "_", "")) %>%
     mutate(position2 = stringr::str_to_lower(.data$position2))
 
   df_rosters <- df_rosters %>%
     mutate(position2 = stringr::str_replace_all(.data$position, stringr::fixed(" "), "")) %>%
     mutate(position2 = stringr::str_replace_all(.data$position2, "-", "")) %>%
+    mutate(position2 = stringr::str_replace_all(.data$position2, "_", "")) %>%
     mutate(position2 = stringr::str_to_lower(.data$position2))
 
   df_rosters <- df_rosters %>%
