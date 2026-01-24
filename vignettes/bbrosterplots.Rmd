@@ -112,11 +112,10 @@ data(df_rosters1)
 df_rosters <- add_roster_metadata(df_rosters)
 # create rosterplots
 group_name <- unique(df_rosters$group_name)
-tournament_ruleset <- "EB25"
 create_rosterplot(df_rosters, group_name)
 # create skill tables
 create_skill_table(df_rosters1, return_table = FALSE)
 # render PDF
-render_rosterbook()
+render_rosterbook(params = list(group_name = group_name))
 ```
 
