@@ -20,6 +20,7 @@ Nothing.
 Render rosterbook as PDF
 }
 \examples{
+\dontrun{
 render_rosterbook(params = list(group_name = "Super League S6",
                                 tournament_ruleset = "EB25",
                                 cover_image = "EB25.jpg",
@@ -27,4 +28,5 @@ render_rosterbook(params = list(group_name = "Super League S6",
                                 races = c("Khorne", "Dwarf"),
                                 perc = FALSE,
                                 team = FALSE), refresh_rmd = TRUE)
+}
 }

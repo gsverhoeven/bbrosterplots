@@ -5,6 +5,7 @@
 #' @param refresh_rmd Controls if the template is refreshed.
 #' @returns Nothing.
 #' @examples
+#'\dontrun{
 #' render_rosterbook(params = list(group_name = "Super League S6",
 #'                                 tournament_ruleset = "EB25",
 #'                                 cover_image = "EB25.jpg",
@@ -12,6 +13,7 @@
 #'                                 races = c("Khorne", "Dwarf"),
 #'                                 perc = FALSE,
 #'                                 team = FALSE), refresh_rmd = TRUE)
+#'}
 
 #' @export
 render_rosterbook <- function(target_dir = "output/", params, refresh_rmd = TRUE){
