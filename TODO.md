@@ -1,5 +1,4 @@
-* add tests
-* setup CI/CD to test on other OSes
+* add more tests
 * check why we have player_id in the input data
 * create a way to add information to coach name, such as elo rating, tournament points , naf number or fumbbl team_id
 * create rosterplot() now creates all rosterplots present in input data.
